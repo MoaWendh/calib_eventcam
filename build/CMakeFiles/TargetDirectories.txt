@@ -1,0 +1,3 @@
+/home/moa/projects/c++/calib_evcam/build/CMakeFiles/calib_cam.dir
+/home/moa/projects/c++/calib_evcam/build/CMakeFiles/edit_cache.dir
+/home/moa/projects/c++/calib_evcam/build/CMakeFiles/rebuild_cache.dir

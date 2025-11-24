@@ -1,0 +1,8 @@
+{
+  "program_name": "acquire_pattern",
+  "pattern_type": "CHESSBOARD",
+  "cols": 9,
+  "rows": 6,
+  "output_file": "calibracao_teste.raw",
+  "square_dist": 0.03
+}
