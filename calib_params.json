@@ -3,6 +3,6 @@
   "pattern_type": "CHESSBOARD",
   "cols": 9,
   "rows": 6,
-  "output_file": "calibracao_teste.raw",
+  "output_file": "../data_calibration.raw",
   "square_dist": 0.03
 }

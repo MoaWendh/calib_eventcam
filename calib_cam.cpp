@@ -14,13 +14,15 @@
 #include    <string>
 #include    <boost/property_tree/ptree.hpp>
 #include    <boost/property_tree/json_parser.hpp>
+#include    <nlohmann/json.hpp>
+#include    <fstream>
 
 #include    "blinking_pattern_focus.h"
 #include    "calibration_recording.h"
 
 
-// This struct maintaains data in the memori for argc/argv to calibration data colection:
-struct calib_parameters {
+// This struct maintaains data in the memori for "argc" and "argv" to calibration data colection:
+struct calibration_parameters {
     // Strings data container:
     std::vector<std::string> args_data; 
     
@@ -40,6 +42,7 @@ void clear_screem(){
     //system("clear");
     std::cout << "\033[2J\033[1;1H" << std::flush;
 }
+
 
 // Show menu function:
 char show_menu(){
@@ -70,13 +73,6 @@ char show_menu(){
 
     return choice; 
 }
-
-int tst(int argc, char *argv[]) {
-
-    return 0;    
-
-}
-
 
 
 // This function calls the Metavision SDK adjust focus routine:
@@ -111,7 +107,7 @@ void adjust_focus(){
 
 
 // APenas verifica se a camera está conectada na USB
-bool testa_conexão_evcam(){
+bool test_conection_evcam(){
     clear_screem();
 
     std::cout<<' '<<std::endl;
@@ -142,53 +138,52 @@ bool testa_conexão_evcam(){
 }
 
 
-
-calib_parameters load_calib_params_from_json(const std::string& json_file) {
-    calib_parameters params;
+// Reading the parameters from "calib_params.json":
+calibration_parameters load_calib_params_from_json(const std::string& json_file) {
+    calibration_parameters params;
     namespace pt = boost::property_tree;
     pt::ptree root;
+    nlohmann::json json_var;
 
-    // 1. Try to read .json file:
+
+    // Trying to open .json file:
     try {
-        pt::read_json(json_file, root);
+        std::ifstream file_json(json_file);
+        file_json >> json_var;
     } catch (const std::exception &e) {
-        std::cerr << "[Erro] Falha ao ler '" << json_file << "': " << e.what() << std::endl;
-        return params; // Retorna struct vazia (argc = 0)
+        std::cerr << "[Erro] Falha ao tentar abrir aqruivo:" << json_file << "': " << e.what() << std::endl;
+        return params; // Return an ampty struct (argc = 0).
     }
-
-    // 2. Preenchee o vetor de dados (Strings)
-    // IMPORTANTE: Preencher todas as strings PRIMEIRO para garantir que
-    // elas não mudem de endereço de memória depois.
     
-    // Nome do programa:
-    params.args_data.push_back(root.get<std::string>("program_name", "recorder_app"));
+    // Recovering data from json object:
+    std::string program_name= json_var["program_name"].get<std::string>(); 
+    std::string pattern_type= json_var["pattern_type"].get<std::string>();
+    int cols= json_var["cols"].get<int>();
+    int rows= json_var["rows"].get<int>();
+    std::string output_file= json_var["output_file"].get<std::string>();
+    float square_dist= json_var["square_dist"].get<float>();
 
-    // Pattern Type
+    // Creating data vectors (Strings).    
+    // Pattern Type:
     params.args_data.push_back("--pattern-type");
-    params.args_data.push_back(root.get<std::string>("pattern_type", "chessboard"));
+    params.args_data.push_back("pattern_type");
 
-    // Width (Cols)
+    // Width (Number of inner corners of cols):
     params.args_data.push_back("--cols"); // Nome correto do parâmetro do SDK
-    params.args_data.push_back(root.get<std::string>("cols", "9"));
+    params.args_data.push_back(std::to_string(cols));
 
-    // Height (Rows)
+    // Height (Number of the inner corners of rows)
     params.args_data.push_back("--rows"); // Nome correto do parâmetro do SDK
-    params.args_data.push_back(root.get<std::string>("rows", "6"));
+    params.args_data.push_back(std::to_string(rows));
 
-    // Output File
-    params.args_data.push_back("-o"); // Flag curta (um traço)
-    params.args_data.push_back(root.get<std::string>("output_file", "calibracao_teste.raw"));
-
-    /*
-    // Opcional: Square Dist (se estiver no JSON)
-    if (root.get_child_optional("square_dist")) {
-        params.args_data.push_back("--square-dist");
-        params.args_data.push_back(root.get<std::string>("square_dist"));
-    }*/
-
-    // 3. Preencher o vetor de ponteiros (argv)
-    // Agora que as strings estão fixas na memória, criamos os ponteiros para elas.
-    params.args_ptrs.reserve(params.args_data.size() + 1);
+    // Name of raw data output file (raw data = images).
+    // OUtput file name:
+    params.args_data.push_back("-o"); // Nome correto do parâmetro do SDK
+    params.args_data.push_back(output_file);
+     
+   
+    // Creating pointer argv:
+    params.args_ptrs.reserve(params.args_data.size());
 
     for (auto &str : params.args_data) {
         // const_cast remove o 'const' do c_str(), pois argv é char**
@@ -196,7 +191,7 @@ calib_parameters load_calib_params_from_json(const std::string& json_file) {
     }
     params.args_ptrs.push_back(nullptr); // Padrão C/C++: argv deve terminar com NULL
 
-    // 4. Configurar as variáveis de conveniência
+    // Setting arc and argv variables:
     params.argc = params.args_ptrs.size() - 1; // Desconta o nullptr
     params.argv = params.args_ptrs.data();
 
@@ -206,11 +201,15 @@ calib_parameters load_calib_params_from_json(const std::string& json_file) {
 
 
 void calibration_acquire_frames(){
-    std::string json_file= "/home/moa/projects/c++/calib_evcam/calib_params.json";
+    // Defining .json name file:
+    std::string json_file= "../calib_params.json";
 
-    calib_parameters param= load_calib_params_from_json(json_file);
+    // Recovering params from .json file:
+    calibration_parameters param= load_calib_params_from_json(json_file);
 
+    // Calling SDK Metavision calibration recording imagens function: 
     int var_teste= calibration_recording(param.argc, param.argv);
+
     /*   
     // Definition of the arguments:
     char arg0[] = "acquire_pattern"; // Program name.
@@ -255,6 +254,7 @@ void calibration_generate_parameters(){
 }
 
 
+// This function selected the routine according to the content of the choice variable:
 bool trata_menu(char choice){
     
     switch (choice)
@@ -262,7 +262,7 @@ bool trata_menu(char choice){
         case 'a':
         case 'A':
            // :
-           if (!testa_conexão_evcam()){
+           if (!test_conection_evcam()){
                 std::cout<< "Camera não conectada!!! "<< std::endl;
                 std::cout<< "Digite qualquer tecla para retornar ao menu:" << std::endl;
                 std::cin.get();
@@ -308,11 +308,13 @@ int main(){
 
     clear_screem();
 
-    //std::cout<<"Passou Aqui!!"<<std::endl;
-
     while(continue_run){
+        // Calling function to show IHM.
+        // It returns a charr variable to verify the choice: 
         my_choice= show_menu();
 
+        // Calling function to test the choice.
+        // Testing the variable "my_choice": 
         continue_run= trata_menu(my_choice);
     }
     

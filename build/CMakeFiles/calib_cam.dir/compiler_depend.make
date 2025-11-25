@@ -2966,6 +2966,70 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: ../calib_cam.cpp \
   /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
   /usr/include/c++/12/bits/fstream.tcc \
+  /usr/include/nlohmann/json.hpp \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/nlohmann/adl_serializer.hpp \
+  /usr/include/nlohmann/detail/conversions/from_json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/nlohmann/detail/exceptions.hpp \
+  /usr/include/nlohmann/detail/value_t.hpp \
+  /usr/include/nlohmann/detail/string_escape.hpp \
+  /usr/include/nlohmann/detail/macro_scope.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /usr/include/nlohmann/detail/meta/detected.hpp \
+  /usr/include/nlohmann/detail/meta/void_t.hpp \
+  /usr/include/c++/12/cassert \
+  /usr/include/nlohmann/detail/input/position_t.hpp \
+  /usr/include/nlohmann/detail/meta/cpp_future.hpp \
+  /usr/include/nlohmann/detail/meta/identity_tag.hpp \
+  /usr/include/nlohmann/detail/meta/type_traits.hpp \
+  /usr/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/end.hpp \
+  /usr/include/nlohmann/json_fwd.hpp \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/nlohmann/detail/conversions/to_json.hpp \
+  /usr/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /usr/include/nlohmann/byte_container_with_subtype.hpp \
+  /usr/include/nlohmann/detail/hash.hpp \
+  /usr/include/nlohmann/detail/input/binary_reader.hpp \
+  /usr/include/nlohmann/detail/input/input_adapters.hpp \
+  /usr/include/nlohmann/detail/input/json_sax.hpp \
+  /usr/include/nlohmann/detail/input/lexer.hpp \
+  /usr/include/nlohmann/detail/meta/is_sax.hpp \
+  /usr/include/nlohmann/detail/input/parser.hpp \
+  /usr/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /usr/include/nlohmann/detail/json_pointer.hpp \
+  /usr/include/nlohmann/detail/json_ref.hpp \
+  /usr/include/nlohmann/detail/output/binary_writer.hpp \
+  /usr/include/nlohmann/detail/output/output_adapters.hpp \
+  /usr/include/nlohmann/detail/output/serializer.hpp \
+  /usr/include/nlohmann/detail/conversions/to_chars.hpp \
+  /usr/include/nlohmann/ordered_map.hpp \
+  /usr/include/nlohmann/detail/macro_unscope.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   ../include/blinking_pattern_focus.h \
   ../include/calibration_recording.h
 
@@ -4183,6 +4247,86 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 ../calibration_recording.cpp:
 
+/usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
+
+/usr/include/nlohmann/detail/macro_unscope.hpp:
+
+/usr/include/nlohmann/ordered_map.hpp:
+
+/usr/include/nlohmann/detail/conversions/to_chars.hpp:
+
+/usr/include/nlohmann/detail/output/output_adapters.hpp:
+
+/usr/include/nlohmann/detail/json_ref.hpp:
+
+/usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
+/usr/include/nlohmann/detail/iterators/primitive_iterator.hpp:
+
+/usr/include/nlohmann/detail/input/parser.hpp:
+
+/usr/include/nlohmann/detail/meta/is_sax.hpp:
+
+/usr/include/nlohmann/detail/input/lexer.hpp:
+
+/usr/include/nlohmann/detail/input/json_sax.hpp:
+
+/usr/include/nlohmann/detail/input/input_adapters.hpp:
+
+/usr/include/nlohmann/detail/input/binary_reader.hpp:
+
+/usr/include/nlohmann/detail/hash.hpp:
+
+/usr/include/nlohmann/byte_container_with_subtype.hpp:
+
+/usr/include/nlohmann/detail/conversions/to_json.hpp:
+
+/usr/include/c++/12/bits/fs_ops.h:
+
+/usr/include/c++/12/codecvt:
+
+/usr/include/c++/12/bits/fs_fwd.h:
+
+/usr/include/c++/12/bits/fs_path.h:
+
+/usr/include/nlohmann/detail/meta/call_std/begin.hpp:
+
+/usr/include/nlohmann/detail/iterators/iterator_traits.hpp:
+
+/usr/include/nlohmann/detail/meta/identity_tag.hpp:
+
+/usr/include/nlohmann/detail/meta/cpp_future.hpp:
+
+/usr/include/nlohmann/detail/input/position_t.hpp:
+
+/usr/include/nlohmann/detail/meta/void_t.hpp:
+
+/usr/include/nlohmann/detail/meta/detected.hpp:
+
+/usr/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+/usr/include/c++/12/bits/gslice_array.h:
+
+/usr/include/c++/12/bits/valarray_after.h:
+
+/usr/include/c++/12/bits/slice_array.h:
+
+/usr/include/c++/12/bits/valarray_before.h:
+
+/usr/include/c++/12/bits/valarray_array.tcc:
+
+/usr/include/nlohmann/detail/conversions/from_json.hpp:
+
+/usr/include/nlohmann/adl_serializer.hpp:
+
+/usr/include/c++/12/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/12/bits/stl_numeric.h:
+
+/usr/include/c++/12/numeric:
+
+/usr/include/nlohmann/json.hpp:
+
 /usr/include/boost/property_tree/json_parser/detail/write.hpp:
 
 /usr/include/boost/format/detail/unset_macros.hpp:
@@ -4216,6 +4360,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/multi_index/detail/is_transparent.hpp:
 
 /usr/include/boost/multi_index/detail/ord_index_ops.hpp:
+
+/usr/include/nlohmann/detail/json_pointer.hpp:
 
 /usr/include/boost/format/detail/config_macros.hpp:
 
@@ -4328,6 +4474,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/multi_index/detail/copy_map.hpp:
 
 /usr/include/boost/multi_index/detail/index_base.hpp:
+
+/usr/include/nlohmann/detail/meta/type_traits.hpp:
 
 /usr/include/boost/multi_index/detail/base_type.hpp:
 
@@ -4477,6 +4625,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/metavision/sdk/ui/utils/window.h:
 
+/usr/include/c++/12/bits/forward_list.h:
+
 /usr/include/boost/archive/detail/abi_suffix.hpp:
 
 /usr/include/metavision/sdk/ui/utils/event_loop.h:
@@ -4525,6 +4675,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/metavision/sdk/base/events/event_erc_counter.h:
 
+/usr/include/nlohmann/detail/output/binary_writer.hpp:
+
 /usr/include/metavision/sdk/base/utils/callback_id.h:
 
 /usr/include/metavision/sdk/driver/cd.h:
@@ -4566,6 +4718,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/serialization/is_bitwise_serializable.hpp:
 
 /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp:
+
+/usr/include/nlohmann/detail/exceptions.hpp:
 
 /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp:
 
@@ -4732,6 +4886,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/c++/12/bits/regex_error.h:
 
 /usr/include/c++/12/tr1/legendre_function.tcc:
+
+/usr/include/nlohmann/detail/iterators/iter_impl.hpp:
 
 /usr/include/boost/mpl/aux_/config/gcc.hpp:
 
@@ -4956,6 +5112,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/mpl/aux_/begin_end_impl.hpp:
 
 /usr/local/include/opencv4/opencv2/flann/timer.h:
+
+/usr/include/c++/12/bits/valarray_array.h:
 
 /usr/include/c++/12/unordered_map:
 
@@ -5257,6 +5415,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/boost/concept/detail/concept_undef.hpp:
 
+/usr/include/c++/12/bits/fs_dir.h:
+
 /usr/include/boost/mpl/aux_/arity.hpp:
 
 /usr/include/boost/iterator/iterator_concepts.hpp:
@@ -5302,6 +5462,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/nlohmann/detail/iterators/iteration_proxy.hpp:
 
 /usr/include/boost/preprocessor/arithmetic/inc.hpp:
 
@@ -5413,6 +5575,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:
 
+/usr/include/nlohmann/detail/value_t.hpp:
+
 /usr/include/metavision/sdk/calibration/algorithms/blinking_dots_grid_detector_algorithm.h:
 
 ../blinking_chessboard_detector.cpp:
@@ -5458,6 +5622,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/math.h:
+
+/usr/include/nlohmann/detail/meta/call_std/end.hpp:
 
 /usr/include/boost/mpl/limits/list.hpp:
 
@@ -5507,6 +5673,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/boost/math/special_functions/detail/fp_traits.hpp:
 
+/usr/include/nlohmann/detail/iterators/internal_iterator.hpp:
+
 /usr/include/boost/move/detail/type_traits.hpp:
 
 /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp:
@@ -5544,6 +5712,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/type_traits/is_default_constructible.hpp:
 
 /usr/include/c++/12/chrono:
+
+/usr/include/c++/12/valarray:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -5590,6 +5760,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/system/detail/generic_category.hpp:
 
 /usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp:
+
+/usr/include/c++/12/forward_list:
 
 /usr/include/boost/type_traits/is_const.hpp:
 
@@ -5877,6 +6049,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/stdlib.h:
 
+/usr/include/nlohmann/detail/macro_scope.hpp:
+
 /usr/include/c++/12/ext/aligned_buffer.h:
 
 /usr/include/boost/type_traits/remove_pointer.hpp:
@@ -6099,6 +6273,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/boost/mpl/aux_/config/eti.hpp:
 
+/usr/include/c++/12/bits/forward_list.tcc:
+
 /usr/include/c++/12/streambuf:
 
 /usr/include/boost/mpl/aux_/config/overload_resolution.hpp:
@@ -6110,6 +6286,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/config/detail/select_compiler_config.hpp:
 
 /usr/include/boost/detail/select_type.hpp:
+
+/usr/include/nlohmann/json_fwd.hpp:
 
 /usr/include/boost/multi_index/sequenced_index_fwd.hpp:
 
@@ -6160,6 +6338,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
 
 /usr/include/boost/mpl/if.hpp:
+
+/usr/include/nlohmann/detail/output/serializer.hpp:
 
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
 
@@ -6427,6 +6607,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/boost/utility/identity_type.hpp:
 
+/usr/include/c++/12/bits/mask_array.h:
+
 /usr/include/boost/iterator/advance.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -6680,6 +6862,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 /usr/include/boost/mpl/aux_/contains_impl.hpp:
 
 /usr/include/boost/mpl/begin_end.hpp:
+
+/usr/include/c++/12/bits/gslice.h:
 
 /usr/include/boost/mpl/aux_/iter_apply.hpp:
 
@@ -6941,6 +7125,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/include/metavision/sdk/core/algorithms/shared_events_buffer_producer_algorithm.h:
 
+/usr/include/c++/12/bits/indirect_array.h:
+
 /usr/include/boost/cerrno.hpp:
 
 /usr/include/boost/type_traits/is_class.hpp:
@@ -6985,11 +7171,15 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: ../calibration_recording.c
 
 /usr/local/include/opencv4/opencv2/flann/autotuned_index.h:
 
+/usr/include/nlohmann/detail/string_escape.hpp:
+
 /usr/include/boost/utility/base_from_member.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h:
 
 /usr/include/c++/12/bits/fstream.tcc:
+
+/usr/include/c++/12/filesystem:
 
 /usr/include/metavision/sdk/base/utils/log.h:
 
