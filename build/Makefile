@@ -249,6 +249,30 @@ calibration_recording.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cam.dir/build.make CMakeFiles/calib_cam.dir/calibration_recording.cpp.s
 .PHONY : calibration_recording.cpp.s
 
+metavision_mono_calibration.o: metavision_mono_calibration.cpp.o
+.PHONY : metavision_mono_calibration.o
+
+# target to build an object file
+metavision_mono_calibration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cam.dir/build.make CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o
+.PHONY : metavision_mono_calibration.cpp.o
+
+metavision_mono_calibration.i: metavision_mono_calibration.cpp.i
+.PHONY : metavision_mono_calibration.i
+
+# target to preprocess a source file
+metavision_mono_calibration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cam.dir/build.make CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.i
+.PHONY : metavision_mono_calibration.cpp.i
+
+metavision_mono_calibration.s: metavision_mono_calibration.cpp.s
+.PHONY : metavision_mono_calibration.s
+
+# target to generate assembly for a file
+metavision_mono_calibration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calib_cam.dir/build.make CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.s
+.PHONY : metavision_mono_calibration.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +297,9 @@ help:
 	@echo "... calibration_recording.o"
 	@echo "... calibration_recording.i"
 	@echo "... calibration_recording.s"
+	@echo "... metavision_mono_calibration.o"
+	@echo "... metavision_mono_calibration.i"
+	@echo "... metavision_mono_calibration.s"
 .PHONY : help
 
 

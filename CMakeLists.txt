@@ -24,7 +24,8 @@ add_executable(${sample}
                blinking_pattern_focus.cpp
                calibration_recording.cpp
                blinking_chessboard_detector.cpp 
-               blinking_dots_grid_detector.cpp)
+               blinking_dots_grid_detector.cpp
+               metavision_mono_calibration.cpp)
 
 target_include_directories(${sample} PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}

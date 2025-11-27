@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/calib_cam.dir/calib_cam.cpp.o.d"
   "CMakeFiles/calib_cam.dir/calibration_recording.cpp.o"
   "CMakeFiles/calib_cam.dir/calibration_recording.cpp.o.d"
+  "CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o"
+  "CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o.d"
   "calib_cam"
   "calib_cam.pdb"
 )

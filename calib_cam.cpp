@@ -16,12 +16,51 @@
 #include    <boost/property_tree/json_parser.hpp>
 #include    <nlohmann/json.hpp>
 #include    <fstream>
+#include    <stdexcept>
 
 #include    "blinking_pattern_focus.h"
 #include    "calibration_recording.h"
+#include    "matavision_mono_calibration.h"
 
 
-// This struct maintaains data in the memori for "argc" and "argv" to calibration data colection:
+// The variable "global_config_ptr" is a global pointer to retains data reads from .json file:
+static std::unique_ptr<const nlohmann::json> global_params_ptr;
+
+
+// Inicialization function to load data from .json file (Calling onli in the main())
+void init_params(const std::string& filename) {
+    // Verifing inicialization
+    if (global_params_ptr) {
+        std::cerr << "Function already called!!!" << std::endl;
+        return; 
+    }
+    
+    std::cout << "Reading file: " << filename << " ..." << std::endl;
+    std::ifstream file(filename);
+    
+    if (!file.is_open()) {
+        throw std::runtime_error("Error in opening .json file!!! " + filename);
+    }
+    
+    nlohmann::json data_jason;
+    file >> data_jason;
+    
+    // Store data reads from .json file in pointer "global_config_ptr".
+    global_params_ptr = std::make_unique<const nlohmann::json>(std::move(data_jason));
+}
+
+
+// Access function to "global_config_ptr" to retrieve parameters loaded from the .json file:
+const nlohmann::json& get_params() {
+    if (!global_params_ptr) {
+        throw std::runtime_error("ERROR!!! A configuração não foi lida do .json file!!!");
+    }
+    return *global_params_ptr;
+}
+
+
+
+// This struct maintains data in the memori for "argc" and "argv" to calibration data colection:
 struct calibration_parameters {
     // Strings data container:
     std::vector<std::string> args_data; 
@@ -137,9 +176,9 @@ bool test_conection_evcam(){
     return true;
 }
 
-
+/*
 // Reading the parameters from "calib_params.json":
-calibration_parameters load_calib_params_from_json(const std::string& json_file) {
+calibration_parameters load_calib_params_from_json(const std::string& json_file_name, const std::vector<std::string>& fields) {
     calibration_parameters params;
     namespace pt = boost::property_tree;
     pt::ptree root;
@@ -148,25 +187,35 @@ calibration_parameters load_calib_params_from_json(const std::string& json_file)
 
     // Trying to open .json file:
     try {
-        std::ifstream file_json(json_file);
+        std::ifstream file_json(json_file_name);
         file_json >> json_var;
     } catch (const std::exception &e) {
-        std::cerr << "[Erro] Falha ao tentar abrir aqruivo:" << json_file << "': " << e.what() << std::endl;
+        std::cerr << "[Erro] Falha ao tentar abrir aqruivo:" << json_file_name << "': " << e.what() << std::endl;
         return params; // Return an ampty struct (argc = 0).
     }
     
     // Recovering data from json object:
-    std::string program_name= json_var["program_name"].get<std::string>(); 
-    std::string pattern_type= json_var["pattern_type"].get<std::string>();
-    int cols= json_var["cols"].get<int>();
-    int rows= json_var["rows"].get<int>();
-    std::string output_file= json_var["output_file"].get<std::string>();
-    float square_dist= json_var["square_dist"].get<float>();
+    std::string program_name= json_var[fields[0]].get<std::string>(); 
+    std::string pattern_type= json_var[fields[1]].get<std::string>();
+    int cols= json_var[fields[2]].get<int>();
+    int rows= json_var[fields[3]].get<int>();
+    std::string output_file= json_var[fields[4]].get<std::string>();
+    float square_dist= json_var[fields[5]].get<float>();
+
+    const auto& params_calib= get_params();
+    std::string program_name= params_calib["program_name"].get<std::string>();
+    std::string pattern_type= params_calib["pattern_type"].get<std::string>();
+    int cols= params_calib["cols"].get<int>();
+    int rows= params_calib["rows"].get<int>();
+    std::string output_file= params_calib["output_file"].get<std::string>();
+    float square_dist= params_calib["square_dist"].get<float>();
+
 
     // Creating data vectors (Strings).    
     // Pattern Type:
     params.args_data.push_back("--pattern-type");
-    params.args_data.push_back("pattern_type");
+    //params.args_data.push_back("pattern_type");
+    params.args_data.push_back(pattern_type);
 
     // Width (Number of inner corners of cols):
     params.args_data.push_back("--cols"); // Nome correto do parâmetro do SDK
@@ -197,60 +246,100 @@ calibration_parameters load_calib_params_from_json(const std::string& json_file)
 
     return params;
 }
-
+*/
 
 
 void calibration_acquire_frames(){
-    // Defining .json name file:
-    std::string json_file= "../calib_params.json";
+    calibration_parameters params;
 
-    // Recovering params from .json file:
-    calibration_parameters param= load_calib_params_from_json(json_file);
+    // Recouver .json data from global pointer "params_calib": 
+    const auto& params_calib= get_params();
 
+    // 
+    std::string program_name= params_calib["program_name"].get<std::string>();
+    std::string pattern_type= params_calib["pattern_type"].get<std::string>();
+    int cols= params_calib["cols"].get<int>();
+    int rows= params_calib["rows"].get<int>();
+    std::string output_file= params_calib["output_file"].get<std::string>();
+    float square_dist= params_calib["square_dist"].get<float>();
+
+
+    // Creating data vectors (Strings).    
+    // Pattern Type:
+    params.args_data.push_back("--pattern-type");
+    //params.args_data.push_back("pattern_type");
+    params.args_data.push_back(pattern_type);
+
+    // Width (Number of inner corners of cols):
+    params.args_data.push_back("--cols"); // Nome correto do parâmetro do SDK
+    params.args_data.push_back(std::to_string(cols));
+
+    // Height (Number of the inner corners of rows)
+    params.args_data.push_back("--rows"); // Nome correto do parâmetro do SDK
+    params.args_data.push_back(std::to_string(rows));
+
+    // Name of raw data output file (raw data = images).
+    // OUtput file name:
+    params.args_data.push_back("-o"); // Nome correto do parâmetro do SDK
+    params.args_data.push_back(output_file);
+     
+   
+    // Creating pointer argv:
+    params.args_ptrs.reserve(params.args_data.size());
+
+    for (auto &str : params.args_data) {
+        // const_cast remove o 'const' do c_str(), pois argv é char**
+        params.args_ptrs.push_back(const_cast<char*>(str.c_str()));
+    }
+    params.args_ptrs.push_back(nullptr); // Padrão C/C++: argv deve terminar com NULL
+
+    // Setting arc and argv variables:
+    params.argc = params.args_ptrs.size() - 1; // Desconta o nullptr
+    params.argv = params.args_ptrs.data();
+ 
     // Calling SDK Metavision calibration recording imagens function: 
-    int var_teste= calibration_recording(param.argc, param.argv);
-
-    /*   
-    // Definition of the arguments:
-    char arg0[] = "acquire_pattern"; // Program name.
-    char arg1[] = "--pattern-type";  // Metavision SDK parameter.
-    char arg2[] = "CHESSBOARD";  // Metavision SDK parameter.
-    char arg3[] = "--cols";  // Metavision SDK parameter.
-    char arg4[] = "9";  // Metavision SDK parameter.
-    char arg5[] = "--rows";  // Metavision SDK parameter.
-    char arg6[] = "6";  // Metavision SDK parameter.
-    char arg7[] = "-o";  // Metavision SDK parameter.
-    char arg8[] = "calibracao_teste.raw";  // Metavision SDK parameter.
-
-    // Crie o array de argumentos para passar à rotina que ira piscar o padrão de estrela
-    // para ajuste do foco:
-    char* argumentos[] = {
-        arg0,
-        arg1,
-        arg2,
-        arg3,
-        arg4,
-        arg5,
-        arg6,
-        arg7,
-        arg8,
-    };
-    
-    // arg_c contém a quantidade de argumentos. 
-    // arg_c é passdo como parametro para a função blinking_pattern_focus(). 
-    int argc_aux = std::size(argumentos);
-    
-    
-    // Chama a função que executa a rotian de ajuste de foco como o padrão piscante
-    // Esta rotina é do SDK Metavision. Ela recebe 2 parâmetros.
-    //int var_teste= calibration_recording(argc_aux, &argumentos[0]);
-    int var_teste= calibration_recording(argc_aux, argumentos);
-*/
+    int var_teste= calibration_recording(params.argc, params.argv);
 }
 
 
-void calibration_generate_parameters(){
+
+void extract_calibration_parameters(){
+    calibration_parameters params;
+
+    // Recouver .json data from global pointer "params_calib": 
+    const auto& params_calib= get_params();
+
+    // 
+    std::string output_file= params_calib["output_file"].get<std::string>();
+    bool refine_calib= params_calib["refine_calibration"].get<bool>();
     
+    // Creating data vectors (Strings).    
+    // Pattern Type:
+    params.args_data.push_back("-i");
+    //params.args_data.push_back("pattern_type");
+    params.args_data.push_back(output_file);
+
+    if (refine_calib) {
+        // Width (Number of inner corners of cols):
+        params.args_data.push_back("-r"); // Nome correto do parâmetro do SDK
+        params.args_data.push_back("REFINE_AND_SHOW_IMAGES");
+    }
+
+    // Creating pointer argv:
+    params.args_ptrs.reserve(params.args_data.size());
+
+    for (auto &str : params.args_data) {
+        // const_cast remove o 'const' do c_str(), pois argv é char**
+        params.args_ptrs.push_back(const_cast<char*>(str.c_str()));
+    }
+    params.args_ptrs.push_back(nullptr); // Padrão C/C++: argv deve terminar com NULL
+
+    // Setting arc and argv variables:
+    params.argc = params.args_ptrs.size() - 1; // Desconta o nullptr
+    params.argv = params.args_ptrs.data();    
+
+    // Calling SDK Metavision calibration to generate intrinsics parameters: 
+    extract_intrinsics_parameters(params.argc, params.argv); 
 }
 
 
@@ -284,7 +373,7 @@ bool trata_menu(char choice){
         
         case 'D':
         case 'd': 
-            calibration_generate_parameters();               
+            extract_calibration_parameters();               
             return true;
             break;
         
@@ -302,12 +391,29 @@ bool trata_menu(char choice){
 
 int main(){
     char my_choice;
-    bool continue_run;
+    bool continue_run= true;
 
-    continue_run= true;
+    // The name and path of .json file to load the calibration parameteras.
+    std::string json_file_name= "../calib_params.json";
 
+    // Clearing the screem:
     clear_screem();
 
+    // Trying to load configuratio parameters from .json file :
+    // IMMEDIATE STARTUP!!
+    try { 
+        init_params(json_file_name); 
+        std::cout << " Successfull in load .json file." << json_file_name << std::endl;        
+    } catch (const std::exception& e) {
+        std::cerr << "Exceção: " << e.what() << std::endl;
+        return 1;
+    }
+    
+    //const auto& config = get_params(); 
+    //std::string padrao = config["pattern_type"].get<std::string>();
+    //std::cout << "Sensor de calibração: " << padrao << std::endl;
+    
+    // Infinite lopping: 
     while(continue_run){
         // Calling function to show IHM.
         // It returns a charr variable to verify the choice: 

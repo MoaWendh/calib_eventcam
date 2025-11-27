@@ -1,6 +1,10 @@
-CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
- /home/moa/projects/c++/calib_evcam/calibration_recording.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/12/functional \
+CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
+ /home/moa/projects/c++/calib_evcam/metavision_mono_calibration.cpp \
+ /usr/include/stdc-predef.h /usr/include/boost/filesystem.hpp \
+ /usr/include/boost/filesystem/config.hpp /usr/include/boost/config.hpp \
+ /usr/include/boost/config/user.hpp \
+ /usr/include/boost/config/detail/select_compiler_config.hpp \
+ /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/12/cstddef \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -12,58 +16,25 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
  /usr/include/c++/12/pstl/pstl_config.h \
- /usr/include/c++/12/bits/stl_function.h /usr/include/c++/12/bits/move.h \
- /usr/include/c++/12/type_traits /usr/include/c++/12/backward/binders.h \
- /usr/include/c++/12/new /usr/include/c++/12/bits/exception.h \
- /usr/include/c++/12/tuple /usr/include/c++/12/bits/stl_pair.h \
- /usr/include/c++/12/bits/utility.h \
- /usr/include/c++/12/bits/uses_allocator.h \
- /usr/include/c++/12/bits/invoke.h \
- /usr/include/c++/12/bits/functional_hash.h \
- /usr/include/c++/12/bits/hash_bytes.h /usr/include/c++/12/bits/refwrap.h \
- /usr/include/c++/12/bits/std_function.h /usr/include/c++/12/typeinfo \
- /usr/include/c++/12/bits/functexcept.h \
- /usr/include/c++/12/bits/exception_defines.h \
- /usr/include/c++/12/unordered_map /usr/include/c++/12/initializer_list \
- /usr/include/c++/12/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
- /usr/include/c++/12/bits/new_allocator.h \
- /usr/include/c++/12/bits/memoryfwd.h \
- /usr/include/c++/12/ext/alloc_traits.h \
- /usr/include/c++/12/bits/alloc_traits.h \
- /usr/include/c++/12/bits/stl_construct.h \
- /usr/include/c++/12/bits/stl_iterator_base_types.h \
- /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/12/bits/concept_check.h \
- /usr/include/c++/12/debug/assertions.h \
- /usr/include/c++/12/bits/ptr_traits.h \
- /usr/include/c++/12/ext/numeric_traits.h \
- /usr/include/c++/12/bits/cpp_type_traits.h \
- /usr/include/c++/12/ext/type_traits.h \
- /usr/include/c++/12/ext/aligned_buffer.h \
- /usr/include/c++/12/bits/hashtable.h \
- /usr/include/c++/12/bits/hashtable_policy.h \
- /usr/include/c++/12/bits/stl_algobase.h \
- /usr/include/c++/12/bits/stl_iterator.h \
- /usr/include/c++/12/debug/debug.h \
- /usr/include/c++/12/bits/predefined_ops.h \
- /usr/include/c++/12/bits/enable_special_members.h \
- /usr/include/c++/12/bits/node_handle.h \
- /usr/include/c++/12/bits/unordered_map.h \
- /usr/include/c++/12/bits/range_access.h \
- /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/vector \
- /usr/include/c++/12/bits/stl_uninitialized.h \
- /usr/include/c++/12/bits/stl_vector.h \
- /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
- /usr/include/c++/12/compare /usr/include/c++/12/bits/stl_algo.h \
- /usr/include/c++/12/bits/algorithmfwd.h \
- /usr/include/c++/12/bits/stl_heap.h \
- /usr/include/c++/12/bits/stl_tempbuf.h \
- /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/c++/12/cstdlib \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
+ /usr/include/boost/config/detail/select_stdlib_config.hpp \
+ /usr/include/c++/12/version \
+ /usr/include/boost/config/stdlib/libstdcpp3.hpp /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
+ /usr/include/boost/config/detail/select_platform_config.hpp \
+ /usr/include/boost/config/platform/linux.hpp /usr/include/c++/12/cstdlib \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -71,9 +42,6 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
@@ -99,36 +67,7 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
- /usr/include/c++/12/bits/std_abs.h /usr/include/c++/12/chrono \
- /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
- /usr/include/c++/12/cstdint \
- /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/c++/12/limits /usr/include/c++/12/ctime /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/timex.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/c++/12/bits/parse_numbers.h \
- /usr/include/boost/filesystem.hpp \
- /usr/include/boost/filesystem/config.hpp /usr/include/boost/config.hpp \
- /usr/include/boost/config/user.hpp \
- /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/12/cstddef \
- /usr/include/boost/config/detail/select_stdlib_config.hpp \
- /usr/include/c++/12/version \
- /usr/include/boost/config/stdlib/libstdcpp3.hpp /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- /usr/include/boost/config/detail/select_platform_config.hpp \
- /usr/include/boost/config/platform/linux.hpp \
+ /usr/include/c++/12/bits/std_abs.h \
  /usr/include/boost/config/detail/posix_features.hpp \
  /usr/include/boost/config/detail/suffix.hpp \
  /usr/include/boost/config/helper_macros.hpp \
@@ -151,9 +90,13 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/boost/type_traits/remove_cv.hpp \
  /usr/include/boost/system/error_code.hpp \
  /usr/include/boost/system/detail/config.hpp \
- /usr/include/boost/cstdint.hpp /usr/include/c++/12/ostream \
- /usr/include/c++/12/ios /usr/include/c++/12/iosfwd \
- /usr/include/c++/12/bits/stringfwd.h /usr/include/c++/12/bits/postypes.h \
+ /usr/include/boost/cstdint.hpp \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/c++/12/ostream /usr/include/c++/12/ios \
+ /usr/include/c++/12/iosfwd /usr/include/c++/12/bits/stringfwd.h \
+ /usr/include/c++/12/bits/memoryfwd.h /usr/include/c++/12/bits/postypes.h \
  /usr/include/c++/12/cwchar /usr/include/wchar.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -162,10 +105,15 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
- /usr/include/c++/12/exception /usr/include/c++/12/bits/exception_ptr.h \
+ /usr/include/c++/12/exception /usr/include/c++/12/bits/exception.h \
+ /usr/include/c++/12/bits/exception_ptr.h \
+ /usr/include/c++/12/bits/exception_defines.h \
  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+ /usr/include/c++/12/typeinfo /usr/include/c++/12/bits/hash_bytes.h \
+ /usr/include/c++/12/new /usr/include/c++/12/bits/move.h \
+ /usr/include/c++/12/type_traits \
  /usr/include/c++/12/bits/nested_exception.h \
- /usr/include/c++/12/bits/char_traits.h \
+ /usr/include/c++/12/bits/char_traits.h /usr/include/c++/12/cstdint \
  /usr/include/c++/12/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++locale.h \
  /usr/include/c++/12/clocale /usr/include/locale.h \
@@ -177,16 +125,46 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
- /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+ /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
  /usr/include/c++/12/bits/locale_classes.h /usr/include/c++/12/string \
+ /usr/include/c++/12/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
+ /usr/include/c++/12/bits/new_allocator.h \
+ /usr/include/c++/12/bits/functexcept.h \
+ /usr/include/c++/12/bits/cpp_type_traits.h \
  /usr/include/c++/12/bits/ostream_insert.h \
  /usr/include/c++/12/bits/cxxabi_forced.h \
- /usr/include/c++/12/bits/basic_string.h /usr/include/c++/12/string_view \
+ /usr/include/c++/12/bits/stl_iterator_base_types.h \
+ /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/12/bits/concept_check.h \
+ /usr/include/c++/12/debug/assertions.h \
+ /usr/include/c++/12/bits/stl_iterator.h \
+ /usr/include/c++/12/ext/type_traits.h \
+ /usr/include/c++/12/bits/ptr_traits.h \
+ /usr/include/c++/12/bits/stl_function.h \
+ /usr/include/c++/12/backward/binders.h \
+ /usr/include/c++/12/ext/numeric_traits.h \
+ /usr/include/c++/12/bits/stl_algobase.h \
+ /usr/include/c++/12/bits/stl_pair.h /usr/include/c++/12/bits/utility.h \
+ /usr/include/c++/12/debug/debug.h \
+ /usr/include/c++/12/bits/predefined_ops.h \
+ /usr/include/c++/12/bits/refwrap.h /usr/include/c++/12/bits/invoke.h \
+ /usr/include/c++/12/bits/range_access.h \
+ /usr/include/c++/12/initializer_list \
+ /usr/include/c++/12/bits/basic_string.h \
+ /usr/include/c++/12/ext/alloc_traits.h \
+ /usr/include/c++/12/bits/alloc_traits.h \
+ /usr/include/c++/12/bits/stl_construct.h /usr/include/c++/12/string_view \
+ /usr/include/c++/12/bits/functional_hash.h \
  /usr/include/c++/12/bits/string_view.tcc \
  /usr/include/c++/12/ext/string_conversions.h /usr/include/c++/12/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -215,7 +193,26 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/12/bits/ctype_inline.h \
  /usr/include/c++/12/bits/locale_facets.tcc \
  /usr/include/c++/12/bits/basic_ios.tcc \
- /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/cstring \
+ /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/functional \
+ /usr/include/c++/12/tuple /usr/include/c++/12/bits/uses_allocator.h \
+ /usr/include/c++/12/bits/std_function.h \
+ /usr/include/c++/12/unordered_map \
+ /usr/include/c++/12/ext/aligned_buffer.h \
+ /usr/include/c++/12/bits/hashtable.h \
+ /usr/include/c++/12/bits/hashtable_policy.h \
+ /usr/include/c++/12/bits/enable_special_members.h \
+ /usr/include/c++/12/bits/node_handle.h \
+ /usr/include/c++/12/bits/unordered_map.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/vector \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
+ /usr/include/c++/12/compare /usr/include/c++/12/bits/stl_algo.h \
+ /usr/include/c++/12/bits/algorithmfwd.h \
+ /usr/include/c++/12/bits/stl_heap.h \
+ /usr/include/c++/12/bits/stl_tempbuf.h \
+ /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/c++/12/cstring \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -239,6 +236,9 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/c++/12/backward/auto_ptr.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h /usr/include/c++/12/mutex \
+ /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
+ /usr/include/c++/12/limits /usr/include/c++/12/ctime \
+ /usr/include/c++/12/bits/parse_numbers.h \
  /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h \
  /usr/include/boost/core/enable_if.hpp /usr/include/c++/12/list \
@@ -881,32 +881,8 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/include/boost/program_options/detail/convert.hpp \
  /usr/include/boost/program_options/variables_map.hpp \
  /usr/include/boost/program_options/version.hpp \
- /usr/include/metavision/sdk/base/utils/log.h \
- /usr/include/c++/12/iostream \
- /usr/include/metavision/sdk/base/utils/detail/log_impl.h \
- /usr/include/metavision/sdk/core/pipeline/pipeline.h \
- /usr/include/c++/12/atomic /usr/include/c++/12/queue \
- /usr/include/c++/12/deque /usr/include/c++/12/bits/stl_deque.h \
- /usr/include/c++/12/bits/deque.tcc /usr/include/c++/12/bits/stl_queue.h \
- /usr/include/metavision/sdk/base/events/event_cd.h \
- /usr/include/metavision/sdk/base/events/event2d.h \
- /usr/include/metavision/sdk/base/utils/detail/struct_pack.h \
- /usr/include/metavision/sdk/base/utils/timestamp.h \
- /usr/include/metavision/sdk/base/events/detail/event_traits.h \
- /usr/include/metavision/sdk/core/pipeline/detail/pipeline_impl.h \
- /usr/include/c++/12/thread /usr/include/c++/12/bits/std_thread.h \
- /usr/include/c++/12/bits/this_thread_sleep.h \
- /usr/include/c++/12/condition_variable \
- /usr/include/metavision/sdk/core/pipeline/base_stage.h \
- /usr/include/c++/12/unordered_set \
- /usr/include/c++/12/bits/unordered_set.h \
- /usr/include/metavision/sdk/base/utils/object_pool.h \
- /usr/include/c++/12/stack /usr/include/c++/12/bits/stl_stack.h \
- /usr/include/metavision/sdk/core/pipeline/detail/base_stage_impl.h \
- /usr/include/metavision/sdk/core/pipeline/algorithm_stage.h \
- /usr/include/metavision/sdk/core/pipeline/frame_generation_stage.h \
- /usr/local/include/opencv4/opencv2/opencv.hpp \
- /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/local/include/opencv4/opencv2/calib3d/calib3d.hpp \
+ /usr/local/include/opencv4/opencv2/calib3d.hpp \
  /usr/local/include/opencv4/opencv2/core.hpp \
  /usr/local/include/opencv4/opencv2/core/cvdef.h \
  /usr/local/include/opencv4/opencv2/core/hal/interface.h \
@@ -917,6 +893,7 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/mm_malloc.h \
  /usr/local/include/opencv4/opencv2/core/version.hpp \
  /usr/local/include/opencv4/opencv2/core/base.hpp \
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
  /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
  /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
@@ -937,156 +914,221 @@ CMakeFiles/calib_cam.dir/calibration_recording.cpp.o: \
  /usr/local/include/opencv4/opencv2/core/optim.hpp \
  /usr/local/include/opencv4/opencv2/core/ovx.hpp \
  /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/local/include/opencv4/opencv2/calib3d.hpp \
  /usr/local/include/opencv4/opencv2/features2d.hpp \
  /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
  /usr/local/include/opencv4/opencv2/flann/defines.h \
  /usr/local/include/opencv4/opencv2/flann/config.h \
  /usr/local/include/opencv4/opencv2/core/affine.hpp \
- /usr/local/include/opencv4/opencv2/dnn.hpp \
- /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
- /usr/local/include/opencv4/opencv2/core/async.hpp \
- /usr/local/include/opencv4/opencv2/dnn/version.hpp \
- /usr/local/include/opencv4/opencv2/dnn/dict.hpp \
- /usr/local/include/opencv4/opencv2/dnn/layer.hpp \
- /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp \
- /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
- /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
- /usr/local/include/opencv4/opencv2/flann.hpp \
- /usr/local/include/opencv4/opencv2/flann/flann_base.hpp \
- /usr/local/include/opencv4/opencv2/flann/general.h \
- /usr/local/include/opencv4/opencv2/flann/matrix.h \
- /usr/local/include/opencv4/opencv2/flann/params.h \
- /usr/local/include/opencv4/opencv2/flann/any.h \
- /usr/local/include/opencv4/opencv2/flann/defines.h \
- /usr/local/include/opencv4/opencv2/flann/saving.h \
- /usr/local/include/opencv4/opencv2/flann/nn_index.h \
- /usr/local/include/opencv4/opencv2/flann/result_set.h \
- /usr/local/include/opencv4/opencv2/flann/all_indices.h \
- /usr/local/include/opencv4/opencv2/flann/kdtree_index.h \
- /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h \
- /usr/local/include/opencv4/opencv2/flann/dist.h \
- /usr/local/include/opencv4/opencv2/flann/heap.h \
- /usr/local/include/opencv4/opencv2/flann/allocator.h \
- /usr/local/include/opencv4/opencv2/flann/random.h \
- /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h \
- /usr/local/include/opencv4/opencv2/flann/kmeans_index.h \
- /usr/local/include/opencv4/opencv2/flann/logger.h \
- /usr/local/include/opencv4/opencv2/flann/composite_index.h \
- /usr/local/include/opencv4/opencv2/flann/linear_index.h \
- /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
- /usr/local/include/opencv4/opencv2/flann/lsh_index.h \
- /usr/local/include/opencv4/opencv2/flann/lsh_table.h \
- /usr/include/c++/12/iomanip /usr/include/c++/12/bits/quoted_string.h \
- /usr/local/include/opencv4/opencv2/flann/autotuned_index.h \
- /usr/local/include/opencv4/opencv2/flann/ground_truth.h \
- /usr/local/include/opencv4/opencv2/flann/index_testing.h \
- /usr/local/include/opencv4/opencv2/flann/timer.h \
- /usr/local/include/opencv4/opencv2/flann/sampling.h \
- /usr/local/include/opencv4/opencv2/highgui.hpp \
+ /usr/local/include/opencv4/opencv2/calib3d/calib3d_c.h \
+ /usr/local/include/opencv4/opencv2/core/types_c.h \
  /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/local/include/opencv4/opencv2/highgui.hpp \
  /usr/local/include/opencv4/opencv2/videoio.hpp \
  /usr/local/include/opencv4/opencv2/imgproc.hpp \
- /usr/local/include/opencv4/opencv2/ml.hpp \
- /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
- /usr/local/include/opencv4/opencv2/objdetect.hpp \
- /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
- /usr/local/include/opencv4/opencv2/photo.hpp \
- /usr/local/include/opencv4/opencv2/stitching.hpp \
- /usr/local/include/opencv4/opencv2/stitching/warpers.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
- /usr/local/include/opencv4/opencv2/core/cuda.hpp \
- /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
- /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp \
- /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
- /usr/local/include/opencv4/opencv2/video.hpp \
- /usr/local/include/opencv4/opencv2/video/tracking.hpp \
- /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
- /usr/include/metavision/sdk/base/utils/sdk_log.h \
- /usr/include/metavision/sdk/base/utils/detail/sdk_log_impl.h \
- /usr/include/metavision/sdk/core/algorithms/periodic_frame_generation_algorithm.h \
- /usr/include/metavision/sdk/core/algorithms/base_frame_generation_algorithm.h \
- /usr/include/metavision/sdk/core/utils/colors.h \
- /usr/include/metavision/sdk/core/utils/detail/colors_impl.h \
- /usr/include/metavision/sdk/core/algorithms/detail/base_frame_generation_algorithm_impl.h \
- /usr/include/metavision/sdk/core/algorithms/event_buffer_reslicer_algorithm.h \
- /usr/include/metavision/sdk/core/algorithms/detail/event_buffer_reslicer_algorithm_impl.h \
- /usr/include/metavision/sdk/core/pipeline/frame_composition_stage.h \
- /usr/include/metavision/sdk/core/utils/frame_composer.h \
- /usr/include/metavision/sdk/core/pipeline/detail/frame_composition_stage_impl.h \
- /usr/include/metavision/sdk/driver/pipeline/camera_stage.h \
- /usr/include/metavision/sdk/driver/camera.h \
- /usr/include/metavision/hal/device/device.h \
- /usr/include/metavision/hal/facilities/i_registrable_facility.h \
- /usr/include/metavision/hal/facilities/i_facility.h \
- /usr/include/metavision/hal/facilities/detail/i_registrable_facility_impl.h \
- /usr/include/metavision/hal/facilities/detail/facility_wrapper.h \
- /usr/include/metavision/sdk/driver/file_config_hints.h \
- /usr/include/metavision/sdk/driver/cd.h \
- /usr/include/metavision/sdk/base/utils/callback_id.h \
- /usr/include/metavision/sdk/driver/erc_counter.h \
- /usr/include/metavision/sdk/base/events/event_erc_counter.h \
- /usr/include/metavision/sdk/driver/ext_trigger.h \
- /usr/include/metavision/sdk/base/events/event_ext_trigger.h \
- /usr/include/metavision/sdk/driver/frame_diff.h \
- /usr/include/metavision/sdk/base/events/raw_event_frame_diff.h \
- /usr/include/metavision/sdk/driver/frame_histo.h \
- /usr/include/metavision/sdk/base/events/raw_event_frame_histo.h \
- /usr/include/metavision/sdk/driver/trigger_out.h \
- /usr/include/metavision/hal/facilities/i_trigger_out.h \
- /usr/include/metavision/sdk/driver/raw_data.h \
- /usr/include/metavision/sdk/driver/roi.h \
- /usr/include/metavision/hal/facilities/i_roi.h \
- /usr/include/metavision/sdk/driver/biases.h \
- /usr/include/metavision/hal/facilities/i_ll_biases.h \
- /usr/include/metavision/hal/utils/device_config.h \
- /usr/include/metavision/sdk/driver/offline_streaming_control.h \
- /usr/include/metavision/sdk/driver/geometry.h \
- /usr/include/metavision/hal/facilities/i_geometry.h \
- /usr/include/metavision/sdk/driver/camera_generation.h \
- /usr/include/metavision/sdk/driver/camera_exception.h \
- /usr/include/metavision/sdk/base/utils/error_utils.h \
- /usr/include/metavision/sdk/driver/camera_error_code.h \
- /usr/include/metavision/sdk/driver/antiflicker_module.h \
- /usr/include/metavision/hal/facilities/i_antiflicker_module.h \
- /usr/include/metavision/sdk/driver/erc_module.h \
- /usr/include/metavision/hal/facilities/i_erc_module.h \
- /usr/include/metavision/sdk/driver/event_trail_filter_module.h \
- /usr/include/metavision/hal/facilities/i_event_trail_filter_module.h \
- /usr/include/metavision/sdk/core/algorithms/shared_cd_events_buffer_producer_algorithm.h \
- /usr/include/metavision/sdk/core/algorithms/shared_events_buffer_producer_algorithm.h \
- /usr/include/metavision/sdk/core/algorithms/async_algorithm.h \
- /usr/include/metavision/sdk/core/algorithms/detail/async_algorithm_impl.h \
- /usr/include/metavision/sdk/core/algorithms/detail/shared_events_buffer_producer_algorithm_impl.h \
- /usr/include/metavision/sdk/cv/algorithms/trail_filter_algorithm.h \
- /usr/include/metavision/sdk/core/algorithms/detail/internal_algorithms.h \
- /usr/include/metavision/sdk/core/utils/detail/platform_utility_functions.h \
- /usr/include/metavision/sdk/calibration/utils/calibration_grid_pattern.h \
- /usr/include/metavision/sdk/calibration/utils/calibration_detection_frame_generator.h \
+ /usr/include/metavision/sdk/base/utils/log.h \
+ /usr/include/c++/12/iostream \
+ /usr/include/metavision/sdk/base/utils/detail/log_impl.h \
+ /usr/include/metavision/sdk/calibration/utils/calibrate_mono_camera.h \
  /usr/include/metavision/sdk/calibration/utils/recorded_pattern_serializer.h \
- /usr/include/metavision/sdk/ui/utils/event_loop.h \
- /usr/include/metavision/sdk/ui/pipeline/frame_display_stage.h \
- /usr/include/metavision/sdk/ui/utils/window.h \
- /usr/include/metavision/sdk/ui/utils/base_window.h \
- /usr/include/metavision/sdk/ui/utils/base_glfw_window.h \
- /usr/include/metavision/sdk/ui/utils/ui_event.h \
- /usr/include/metavision/sdk/ui/utils/opengl_api.h /usr/include/GL/glew.h \
- /usr/include/GL/glu.h /usr/include/GL/gl.h /usr/include/GLFW/glfw3.h \
- /home/moa/projects/c++/calib_evcam/include/blinking_chessboard_detector.h \
+ /usr/include/metavision/sdk/calibration/utils/calibration_grid_pattern.h \
+ /usr/include/metavision/sdk/cv/utils/camera_geometry_helpers.h \
+ /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Core \
+ /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
+ /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+ /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Constants.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Meta.h \
+ /usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+ /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+ /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Memory.h \
+ /usr/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+ /usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+ /usr/include/eigen3/Eigen/src/Core/NumTraits.h \
+ /usr/include/eigen3/Eigen/src/Core/MathFunctions.h \
+ /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+ /usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+ /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+ /usr/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+ /usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+ /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+ /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+ /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+ /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+ /usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+ /usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+ /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+ /usr/include/eigen3/Eigen/src/Core/IO.h \
+ /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+ /usr/include/eigen3/Eigen/src/Core/DenseBase.h \
+ /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+ /usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+ /usr/include/eigen3/Eigen/src/Core/MatrixBase.h \
+ /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+ /usr/include/eigen3/Eigen/src/Core/EigenBase.h \
+ /usr/include/eigen3/Eigen/src/Core/Product.h \
+ /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+ /usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+ /usr/include/eigen3/Eigen/src/Core/Assign.h \
+ /usr/include/eigen3/Eigen/src/Core/ArrayBase.h \
+ /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+ /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+ /usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+ /usr/include/eigen3/Eigen/src/Core/DenseStorage.h \
+ /usr/include/eigen3/Eigen/src/Core/NestByValue.h \
+ /usr/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+ /usr/include/eigen3/Eigen/src/Core/NoAlias.h \
+ /usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+ /usr/include/eigen3/Eigen/src/Core/Matrix.h \
+ /usr/include/eigen3/Eigen/src/Core/Array.h \
+ /usr/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+ /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+ /usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+ /usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+ /usr/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+ /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+ /usr/include/eigen3/Eigen/src/Core/Dot.h \
+ /usr/include/eigen3/Eigen/src/Core/StableNorm.h \
+ /usr/include/eigen3/Eigen/src/Core/Stride.h \
+ /usr/include/eigen3/Eigen/src/Core/MapBase.h \
+ /usr/include/eigen3/Eigen/src/Core/Map.h \
+ /usr/include/eigen3/Eigen/src/Core/Ref.h \
+ /usr/include/eigen3/Eigen/src/Core/Block.h \
+ /usr/include/eigen3/Eigen/src/Core/VectorBlock.h \
+ /usr/include/eigen3/Eigen/src/Core/IndexedView.h \
+ /usr/include/eigen3/Eigen/src/Core/Reshaped.h \
+ /usr/include/eigen3/Eigen/src/Core/Transpose.h \
+ /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/Diagonal.h \
+ /usr/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+ /usr/include/eigen3/Eigen/src/Core/Redux.h \
+ /usr/include/eigen3/Eigen/src/Core/Visitor.h \
+ /usr/include/eigen3/Eigen/src/Core/Fuzzy.h \
+ /usr/include/eigen3/Eigen/src/Core/Swap.h \
+ /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+ /usr/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+ /usr/include/eigen3/Eigen/src/Core/Solve.h \
+ /usr/include/eigen3/Eigen/src/Core/Inverse.h \
+ /usr/include/eigen3/Eigen/src/Core/SolverBase.h \
+ /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/Transpositions.h \
+ /usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+ /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+ /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+ /usr/include/c++/12/atomic \
+ /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+ /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+ /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+ /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+ /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+ /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+ /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+ /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+ /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+ /usr/include/eigen3/Eigen/src/Core/BandMatrix.h \
+ /usr/include/eigen3/Eigen/src/Core/CoreIterators.h \
+ /usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+ /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+ /usr/include/eigen3/Eigen/src/Core/Select.h \
+ /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+ /usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+ /usr/include/eigen3/Eigen/src/Core/Random.h \
+ /usr/include/eigen3/Eigen/src/Core/Replicate.h \
+ /usr/include/eigen3/Eigen/src/Core/Reverse.h \
+ /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+ /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
+ /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+ /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+ /usr/include/eigen3/Eigen/LU /usr/include/eigen3/Eigen/src/misc/Kernel.h \
+ /usr/include/eigen3/Eigen/src/misc/Image.h \
+ /usr/include/eigen3/Eigen/src/LU/FullPivLU.h \
+ /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h \
+ /usr/include/eigen3/Eigen/src/LU/Determinant.h \
+ /usr/include/eigen3/Eigen/src/LU/InverseImpl.h \
+ /usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h \
+ /usr/include/eigen3/Eigen/Cholesky /usr/include/eigen3/Eigen/Jacobi \
+ /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h \
+ /usr/include/eigen3/Eigen/src/Cholesky/LLT.h \
+ /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h \
+ /usr/include/eigen3/Eigen/QR /usr/include/eigen3/Eigen/Householder \
+ /usr/include/eigen3/Eigen/src/Householder/Householder.h \
+ /usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h \
+ /usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h \
+ /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h \
+ /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h \
+ /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h \
+ /usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+ /usr/include/eigen3/Eigen/SVD \
+ /usr/include/eigen3/Eigen/src/misc/RealSvd2x2.h \
+ /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h \
+ /usr/include/eigen3/Eigen/src/SVD/SVDBase.h \
+ /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h \
+ /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h \
+ /usr/include/eigen3/Eigen/Geometry \
+ /usr/include/eigen3/Eigen/src/Geometry/OrthoMethods.h \
+ /usr/include/eigen3/Eigen/src/Geometry/EulerAngles.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h \
+ /usr/include/eigen3/Eigen/src/Geometry/RotationBase.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Quaternion.h \
+ /usr/include/eigen3/Eigen/src/Geometry/AngleAxis.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Transform.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Translation.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Scaling.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Hyperplane.h \
+ /usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h \
+ /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
+ /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
+ /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+ /usr/include/eigen3/Eigen/Eigenvalues \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+ /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /usr/include/metavision/sdk/cv/utils/detail/vec_traits.h \
  /usr/local/include/opencv4/opencv2/core/core.hpp \
- /usr/include/metavision/sdk/calibration/algorithms/blinking_frame_generator_algorithm.h \
- /usr/include/metavision/sdk/calibration/configs/blinking_frame_generator_algorithm_config.h \
- /home/moa/projects/c++/calib_evcam/include/blinking_dots_grid_detector.h \
- /usr/include/metavision/sdk/calibration/algorithms/blinking_dots_grid_detector_algorithm.h \
- /usr/include/metavision/sdk/calibration/configs/blinking_dots_grid_detector_algorithm_config.h
+ /usr/include/metavision/sdk/cv/utils/detail/vec_traits_base.h \
+ /usr/include/metavision/sdk/cv/utils/detail/vec_traits_eigen.h \
+ /usr/include/eigen3/Eigen/Core \
+ /usr/include/metavision/sdk/cv/utils/detail/mat_traits.h \
+ /usr/include/metavision/sdk/cv/utils/detail/mat_traits_base.h \
+ /usr/include/metavision/sdk/cv/utils/detail/mat_traits_eigen.h \
+ /usr/include/metavision/sdk/cv/utils/camera_geometry_base.h \
+ /usr/include/metavision/sdk/cv/utils/camera_geometry.h \
+ /usr/include/metavision/sdk/cv/utils/pinhole_camera_model.h \
+ /usr/include/metavision/sdk/cv/utils/detail/pinhole_camera_model_impl.h \
+ /usr/include/eigen3/Eigen/LU

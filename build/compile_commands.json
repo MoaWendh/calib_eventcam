@@ -1,27 +1,32 @@
 [
 {
   "directory": "/home/moa/projects/c++/calib_evcam/build",
-  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/calib_cam.dir/calib_cam.cpp.o -c /home/moa/projects/c++/calib_evcam/calib_cam.cpp",
+  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/calib_cam.dir/calib_cam.cpp.o -c /home/moa/projects/c++/calib_evcam/calib_cam.cpp",
   "file": "/home/moa/projects/c++/calib_evcam/calib_cam.cpp"
 },
 {
   "directory": "/home/moa/projects/c++/calib_evcam/build",
-  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/calib_cam.dir/blinking_pattern_focus.cpp.o -c /home/moa/projects/c++/calib_evcam/blinking_pattern_focus.cpp",
+  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/calib_cam.dir/blinking_pattern_focus.cpp.o -c /home/moa/projects/c++/calib_evcam/blinking_pattern_focus.cpp",
   "file": "/home/moa/projects/c++/calib_evcam/blinking_pattern_focus.cpp"
 },
 {
   "directory": "/home/moa/projects/c++/calib_evcam/build",
-  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/calib_cam.dir/calibration_recording.cpp.o -c /home/moa/projects/c++/calib_evcam/calibration_recording.cpp",
+  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/calib_cam.dir/calibration_recording.cpp.o -c /home/moa/projects/c++/calib_evcam/calibration_recording.cpp",
   "file": "/home/moa/projects/c++/calib_evcam/calibration_recording.cpp"
 },
 {
   "directory": "/home/moa/projects/c++/calib_evcam/build",
-  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o -c /home/moa/projects/c++/calib_evcam/blinking_chessboard_detector.cpp",
+  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o -c /home/moa/projects/c++/calib_evcam/blinking_chessboard_detector.cpp",
   "file": "/home/moa/projects/c++/calib_evcam/blinking_chessboard_detector.cpp"
 },
 {
   "directory": "/home/moa/projects/c++/calib_evcam/build",
-  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -g -std=gnu++17 -o CMakeFiles/calib_cam.dir/blinking_dots_grid_detector.cpp.o -c /home/moa/projects/c++/calib_evcam/blinking_dots_grid_detector.cpp",
+  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/calib_cam.dir/blinking_dots_grid_detector.cpp.o -c /home/moa/projects/c++/calib_evcam/blinking_dots_grid_detector.cpp",
   "file": "/home/moa/projects/c++/calib_evcam/blinking_dots_grid_detector.cpp"
+},
+{
+  "directory": "/home/moa/projects/c++/calib_evcam/build",
+  "command": "/usr/bin/g++-12 -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_TIMER_DYN_LINK -DEIGEN_MPL2_ONLY -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3 -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o -c /home/moa/projects/c++/calib_evcam/metavision_mono_calibration.cpp",
+  "file": "/home/moa/projects/c++/calib_evcam/metavision_mono_calibration.cpp"
 }
 ]

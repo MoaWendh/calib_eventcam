@@ -6,5 +6,5 @@ CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_FILESYSTEM_DYN_
 
 CXX_INCLUDES = -I/home/moa/projects/c++/calib_evcam -I/home/moa/projects/c++/calib_evcam/include -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3
 
-CXX_FLAGS = -g -std=gnu++17
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
 

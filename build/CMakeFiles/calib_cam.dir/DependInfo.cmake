@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/moa/projects/c++/calib_evcam/blinking_pattern_focus.cpp" "CMakeFiles/calib_cam.dir/blinking_pattern_focus.cpp.o" "gcc" "CMakeFiles/calib_cam.dir/blinking_pattern_focus.cpp.o.d"
   "/home/moa/projects/c++/calib_evcam/calib_cam.cpp" "CMakeFiles/calib_cam.dir/calib_cam.cpp.o" "gcc" "CMakeFiles/calib_cam.dir/calib_cam.cpp.o.d"
   "/home/moa/projects/c++/calib_evcam/calibration_recording.cpp" "CMakeFiles/calib_cam.dir/calibration_recording.cpp.o" "gcc" "CMakeFiles/calib_cam.dir/calibration_recording.cpp.o.d"
+  "/home/moa/projects/c++/calib_evcam/metavision_mono_calibration.cpp" "CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o" "gcc" "CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o.d"
   )
 
 # Targets to which this target links.

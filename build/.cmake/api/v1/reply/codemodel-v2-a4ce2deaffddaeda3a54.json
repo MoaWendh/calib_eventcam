@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "calib_cam::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-calib_cam-Debug-145e42a1633b49166cc0.json",
+					"jsonFile" : "target-calib_cam-Release-df4c03b9d2d6052f8c01.json",
 					"name" : "calib_cam",
 					"projectIndex" : 0
 				}
