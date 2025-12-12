@@ -1,10 +1,11 @@
 {
-  "program_name": "acquire_pattern",
+  "program_name": "calib_cam_1.0",
   "pattern_type": "CHESSBOARD",
   "cols": 9,
   "rows": 6,
-  "output_file": "../data_calibration.raw",
+  "output_file": "../data_calibration",
   "square_dist": 0.03,
   "path_data": "../",
-  "refine_calibration": false
+  "refine_calibration": false,
+  "projeta_padrao": true
 }

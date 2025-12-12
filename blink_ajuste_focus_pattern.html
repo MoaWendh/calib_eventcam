@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Metavision Focus Aid - Invert Mode</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    #controls {
+      position: absolute;
+      top: 0; left: 0; width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 10px; z-index: 10;
+      display: flex; align-items: center; gap: 15px;
+      border-bottom: 1px solid #444;
+    }
+
+    /* O Canvas ocupa tudo */
+    canvas {
+      position: absolute; top: 0; left: 0; z-index: 1;
+      /* Propriedade mágica para garantir bordas nítidas na renderização */
+      image-rendering: pixelated; 
+    }
+
+    .input-group { display: flex; flex-direction: column; }
+    label { font-size: 11px; color: #aaa; margin-bottom: 3px;}
+    input, button { padding: 5px; }
+    button { cursor: pointer; font-weight: bold; background: #007bff; color: white; border: none; }
+    button:disabled { background: #444; }
+  </style>
+</head>
+
+<body>
+
+  <div id="controls">
+    <div class="input-group">
+      <label>1. Imagem Padrão (Star/Checker):</label>
+      <input type="file" id="imageLoader" accept="image/*" />
+    </div>
+
+    <div class="input-group">
+      <label>2. Frequência (Recomendado: 15 ou 30Hz):</label>
+      <input type="number" id="fpsInput" value="15" min="1" max="30">
+    </div>
+
+    <button id="btnAction" onclick="toggleAnimation()" disabled>Carregue uma Imagem</button>
+    <span id="status" style="font-size: 12px; margin-left: auto; margin-right: 20px;">Parado</span>
+  </div>
+
+  <canvas></canvas>
+
+  <script type="text/javascript">
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d', { alpha: false }); // Otimização de performance
+    const imageLoader = document.getElementById('imageLoader');
+    const btnAction = document.getElementById('btnAction');
+    const fpsInput = document.getElementById('fpsInput');
+    const statusSpan = document.getElementById('status');
+
+    let img = new Image();
+    let imgLoaded = false;
+    let isRunning = false;
+    let reqId = 0;
+    
+    // Controle de Inversão
+    let isInverted = false;
+
+    // --- Carregamento ---
+    imageLoader.addEventListener('change', function(e) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            img = new Image();
+            img.onload = function() {
+                imgLoaded = true;
+                btnAction.disabled = false;
+                btnAction.textContent = "INICIAR INVERSÃO";
+                statusSpan.textContent = "Imagem pronta: " + img.width + "x" + img.height;
+                drawStatic();
+            }
+            img.src = event.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0]);
+    }, false);
+
+    // --- Desenho Inteligente ---
+    function draw(inverted) {
+        const width = canvas.width = window.innerWidth;
+        const height = canvas.height = window.innerHeight;
+
+        if (!imgLoaded) return;
+
+        // Se estiver invertido, aplicamos um filtro de cor global
+        // Isso é MUITO rápido e gera contraste extremo para a câmera
+        if (inverted) {
+            ctx.filter = 'invert(1)';
+            ctx.fillStyle = 'white'; // Fundo vira branco na inversão se fosse preto
+        } else {
+            ctx.filter = 'none';
+            ctx.fillStyle = 'black';
+        }
+
+        ctx.fillRect(0, 0, width, height);
+
+        // Desenha a imagem centralizada
+        const hRatio = width / img.width;
+        const vRatio = height / img.height;
+        const ratio = Math.min(hRatio, vRatio);
+        const centerShift_x = (width - img.width * ratio) / 2;
+        const centerShift_y = (height - img.height * ratio) / 2;
+
+        ctx.drawImage(img, 0, 0, img.width, img.height,
+            centerShift_x, centerShift_y, img.width * ratio, img.height * ratio);
+    }
+
+    function drawStatic() {
+        if (!isRunning && imgLoaded) {
+            ctx.filter = 'none';
+            draw(false);
+        }
+    }
+    
+    window.addEventListener('resize', drawStatic);
+
+    // --- Loop de Alta Precisão ---
+    let lastTime = 0;
+
+    function animate(timestamp) {
+        if (!isRunning) return;
+
+        reqId = requestAnimationFrame(animate);
+
+        // Limita o FPS de acordo com o input
+        const targetFPS = parseInt(fpsInput.value) || 15;
+        const interval = 1000 / targetFPS;
+
+        if (!lastTime) lastTime = timestamp;
+        const elapsed = timestamp - lastTime;
+
+        if (elapsed > interval) {
+            lastTime = timestamp - (elapsed % interval);
+            
+            // Alterna o estado de inversão
+            isInverted = !isInverted;
+            draw(isInverted);
+        }
+    }
+
+    function toggleAnimation() {
+        if (!imgLoaded) return;
+
+        if (isRunning) {
+            isRunning = false;
+            cancelAnimationFrame(reqId);
+            btnAction.textContent = "INICIAR INVERSÃO";
+            statusSpan.textContent = "Parado";
+            ctx.filter = 'none';
+            draw(false);
+            document.getElementById('controls').style.opacity = "1";
+        } else {
+            isRunning = true;
+            lastTime = 0;
+            btnAction.textContent = "PARAR";
+            statusSpan.textContent = "Rodando...";
+            document.getElementById('controls').style.opacity = "0.3";
+            requestAnimationFrame(animate);
+        }
+    }
+  </script>
+</body>
+</html>

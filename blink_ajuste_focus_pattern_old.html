@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Siemens Star Focus Tool</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    #controls {
+      position: absolute;
+      top: 0; left: 0; width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px; z-index: 10;
+      display: flex; align-items: center; gap: 20px;
+    }
+
+    .control-group { display: flex; flex-direction: column; }
+    label { font-size: 12px; color: #ccc; margin-bottom: 5px; }
+    
+    input[type=range] { width: 200px; }
+    
+    #readout { font-weight: bold; color: #00d2ff; width: 50px; }
+
+    canvas {
+      position: absolute; top: 0; left: 0; z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="controls">
+    <div class="control-group">
+      <label>Velocidade de Rotação (RPM)</label>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <input type="range" id="speedSlider" min="0" max="300" value="60" step="1">
+        <span id="readout">60</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Número de Segmentos</label>
+      <input type="range" id="segmentsSlider" min="4" max="64" value="32" step="2">
+    </div>
+    
+    <div style="font-size: 14px; color: #aaa; margin-left: auto; margin-right: 20px;">
+      Dica: Ajuste o foco até que o centro da estrela (onde as pontas se encontram) esteja nítido.
+    </div>
+  </div>
+
+  <canvas></canvas>
+
+  <script type="text/javascript">
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    const speedSlider = document.getElementById('speedSlider');
+    const segmentsSlider = document.getElementById('segmentsSlider');
+    const readout = document.getElementById('readout');
+
+    let angle = 0;
+    let lastTime = 0;
+
+    // Configuração Inicial
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    function drawSiemensStar(cx, cy, radius, segments, rotationAngle) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Fundo Branco
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Segmentos Pretos
+        ctx.fillStyle = 'black';
+        const step = (Math.PI * 2) / segments;
+
+        ctx.beginPath();
+        for (let i = 0; i < segments; i += 2) { // Desenha sim ou não
+            // Ponto inicial (centro)
+            ctx.moveTo(cx, cy);
+            
+            // Arco externo
+            const startAngle = i * step + rotationAngle;
+            const endAngle = (i + 1) * step + rotationAngle;
+            
+            ctx.arc(cx, cy, radius, startAngle, endAngle);
+            
+            // Volta ao centro
+            ctx.lineTo(cx, cy);
+        }
+        ctx.fill();
+
+        // Círculo central pequeno para referência de foco fino
+        ctx.beginPath();
+        ctx.arc(cx, cy, radius * 0.02, 0, Math.PI * 2);
+        ctx.fillStyle = 'red'; // Ponto vermelho ajuda na referência visual humana
+        ctx.fill();
+    }
+
+    function animate(timestamp) {
+        if (!lastTime) lastTime = timestamp;
+        const dt = (timestamp - lastTime) / 1000; // delta time em segundos
+        lastTime = timestamp;
+
+        const rpm = parseInt(speedSlider.readout = speedSlider.value);
+        const segments = parseInt(segmentsSlider.value);
+        
+        readout.textContent = rpm;
+
+        // Velocidade angular: RPM -> Radianos por segundo
+        // RPM * 2PI / 60
+        const angularVelocity = (rpm * Math.PI * 2) / 60;
+        
+        angle += angularVelocity * dt;
+
+        const cx = canvas.width / 2;
+        const cy = canvas.height / 2;
+        const radius = Math.min(cx, cy) * 0.9;
+
+        drawSiemensStar(cx, cy, radius, segments, angle);
+
+        requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+
+  </script>
+</body>
+</html>

@@ -22,8 +22,7 @@
 #include <metavision/sdk/calibration/utils/pattern_blinker.h>
 #include <metavision/sdk/calibration/configs/dft_high_freq_scorer_algorithm_config.h>
 #include <metavision/sdk/calibration/algorithms/dft_high_freq_scorer_algorithm.h>
-#include <metavision/sdk/calibration/algorithms/blinking_frame_generator_algorithm.h>
-#include <metavision/sdk/calibration/utils/pattern_blinker.h>
+
 #include <metavision/sdk/ui/utils/event_loop.h>
 #include <metavision/sdk/ui/utils/window.h>
 

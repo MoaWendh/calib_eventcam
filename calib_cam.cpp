@@ -140,7 +140,8 @@ void adjust_focus(){
     
     // Chama a função que executa a rotian de ajuste de foco como o padrão piscante
     // Esta rotina é do SDK Metavision. Ela recebe 2 parâmetros.
-    int var_teste= blinking_pattern_focus(argc_aux, &argumentos[0]);
+   int var_teste= blinking_pattern_focus(argc_aux, &argumentos[0]);
+
 }
 
 
@@ -255,6 +256,9 @@ void calibration_acquire_frames(){
     // Recouver .json data from global pointer "params_calib": 
     const auto& params_calib= get_params();
 
+    // "program_name": "calib_cam_1.0",
+   // "pattern_type_name": "acquire_pattern",
+
     // 
     std::string program_name= params_calib["program_name"].get<std::string>();
     std::string pattern_type= params_calib["pattern_type"].get<std::string>();
@@ -264,7 +268,9 @@ void calibration_acquire_frames(){
     float square_dist= params_calib["square_dist"].get<float>();
 
 
-    // Creating data vectors (Strings).    
+    // Creating data vectors (Strings).
+    // Pattern name:
+    params.args_data.push_back(program_name);
     // Pattern Type:
     params.args_data.push_back("--pattern-type");
     //params.args_data.push_back("pattern_type");
@@ -310,10 +316,12 @@ void extract_calibration_parameters(){
     const auto& params_calib= get_params();
 
     // 
+    std::string program_name= params_calib["program_name"].get<std::string>();    
     std::string output_file= params_calib["output_file"].get<std::string>();
     bool refine_calib= params_calib["refine_calibration"].get<bool>();
     
-    // Creating data vectors (Strings).    
+    // Creating data vectors (Strings).
+    params.args_data.push_back(program_name);        
     // Pattern Type:
     params.args_data.push_back("-i");
     //params.args_data.push_back("pattern_type");
