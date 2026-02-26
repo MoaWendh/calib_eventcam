@@ -261,12 +261,22 @@ void calibration_acquire_frames(){
 
     // 
     std::string program_name= params_calib["program_name"].get<std::string>();
-    std::string pattern_type= params_calib["pattern_type"].get<std::string>();
-    int cols= params_calib["cols"].get<int>();
-    int rows= params_calib["rows"].get<int>();
-    std::string output_file= params_calib["output_file"].get<std::string>();
-    float square_dist= params_calib["square_dist"].get<float>();
+    std::cout<<"Program name: "<<program_name.c_str()<<std::endl;
 
+    std::string pattern_type= params_calib["pattern_type"].get<std::string>();
+    std::cout<<"Padrão: "<<pattern_type.c_str()<<std::endl;
+
+    int cols= params_calib["cols"].get<int>();
+    std::cout<<"Colunas: "<<cols<<std::endl;
+
+    int rows= params_calib["rows"].get<int>();
+    std::cout<<"Linhas: "<<rows<<std::endl;
+
+    std::string output_file= params_calib["output_file"].get<std::string>();
+    std::cout<<"Pasta destino: "<<output_file.c_str()<<std::endl;
+
+    float square_dist= params_calib["square_dist"].get<float>();
+    std::cout<<"Distancia quadrados: "<<square_dist<<std::endl;
 
     // Creating data vectors (Strings).
     // Pattern name:
@@ -375,6 +385,8 @@ bool trata_menu(char choice){
          
         case 'c':
         case 'C':
+            std::cout<< "Chamando função para exibir chess board" << std::endl;
+
             calibration_acquire_frames();
             return true;
             break;

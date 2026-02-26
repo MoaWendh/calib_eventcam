@@ -4,8 +4,8 @@
   "cols": 9,
   "rows": 6,
   "output_file": "../data_calibration",
-  "square_dist": 0.03,
-  "path_data": "../",
+  "square_dist": 0.035,
+  "path_data": "/home/moa/projects/c++/calib_evcam/",
   "refine_calibration": false,
   "projeta_padrao": true
 }
