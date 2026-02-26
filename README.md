@@ -14,7 +14,7 @@
 
 ### CPU: Nvidia Jetson Orin Nano
 
-### Arquitetura: @ARM @Cortex - 6 Núcleos - 64 bits
+### Arquitetura: amd x86_64
 
 ---
 
