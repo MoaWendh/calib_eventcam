@@ -1,10 +1,9 @@
 CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
- /home/moa/projects/c++/calib_evcam/blinking_chessboard_detector.cpp \
- /usr/include/stdc-predef.h \
- /usr/local/include/opencv4/opencv2/highgui.hpp \
- /usr/local/include/opencv4/opencv2/core.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/c++/12/limits \
+ /home/moa/projects/eventcam/calib_eventcam/blinking_chessboard_detector.cpp \
+ /usr/include/stdc-predef.h /usr/include/opencv4/opencv2/highgui.hpp \
+ /usr/include/opencv4/opencv2/core.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/core/version.hpp /usr/include/c++/12/limits \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -16,7 +15,7 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
  /usr/include/c++/12/pstl/pstl_config.h \
- /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/include/opencv4/opencv2/core/hal/interface.h \
  /usr/include/c++/12/cstddef \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
  /usr/include/c++/12/cstdint \
@@ -28,7 +27,7 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/mmintrin.h \
@@ -55,16 +54,13 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/12/bits/std_abs.h /usr/include/c++/12/array \
  /usr/include/c++/12/compare /usr/include/c++/12/initializer_list \
  /usr/include/c++/12/type_traits /usr/include/c++/12/bits/functexcept.h \
@@ -83,9 +79,8 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/c++/12/bits/ptr_traits.h /usr/include/c++/12/debug/debug.h \
  /usr/include/c++/12/bits/predefined_ops.h \
  /usr/include/c++/12/bits/range_access.h \
- /usr/local/include/opencv4/opencv2/core/version.hpp \
- /usr/local/include/opencv4/opencv2/core/base.hpp \
- /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/include/opencv4/opencv2/core/base.hpp \
+ /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/c++/12/climits \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
@@ -105,12 +100,10 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/c++/12/bits/uniform_int_dist.h \
  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12/pstl/execution_defs.h \
- /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
- /usr/include/c++/12/cstring /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
- /usr/include/c++/12/cctype /usr/include/ctype.h \
- /usr/include/c++/12/string /usr/include/c++/12/bits/stringfwd.h \
+ /usr/include/opencv4/opencv2/core/cvstd.hpp /usr/include/c++/12/cstring \
+ /usr/include/string.h /usr/include/strings.h /usr/include/c++/12/cctype \
+ /usr/include/ctype.h /usr/include/c++/12/string \
+ /usr/include/c++/12/bits/stringfwd.h \
  /usr/include/c++/12/bits/memoryfwd.h \
  /usr/include/c++/12/bits/char_traits.h \
  /usr/include/c++/12/bits/postypes.h /usr/include/c++/12/cwchar \
@@ -120,7 +113,6 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/12/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
  /usr/include/c++/12/bits/new_allocator.h \
@@ -145,10 +137,9 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/12/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/12/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
@@ -175,7 +166,7 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/c++/12/tr1/poly_hermite.tcc \
  /usr/include/c++/12/tr1/poly_laguerre.tcc \
  /usr/include/c++/12/tr1/riemann_zeta.tcc \
- /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
  /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \
@@ -209,25 +200,24 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/backward/auto_ptr.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
- /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
- /usr/include/assert.h /usr/local/include/opencv4/opencv2/core/check.hpp \
- /usr/local/include/opencv4/opencv2/core/traits.hpp \
- /usr/local/include/opencv4/opencv2/core/matx.hpp \
- /usr/local/include/opencv4/opencv2/core/saturate.hpp \
- /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/local/include/opencv4/opencv2/core/types.hpp \
- /usr/include/c++/12/cfloat \
+ /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/include/opencv4/opencv2/core/vsx_utils.hpp /usr/include/assert.h \
+ /usr/include/opencv4/opencv2/core/check.hpp \
+ /usr/include/opencv4/opencv2/core/traits.hpp \
+ /usr/include/opencv4/opencv2/core/matx.hpp \
+ /usr/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/include/opencv4/opencv2/core/types.hpp /usr/include/c++/12/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/float.h \
  /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_vector.h \
  /usr/include/c++/12/bits/stl_bvector.h \
  /usr/include/c++/12/bits/vector.tcc \
- /usr/local/include/opencv4/opencv2/core/mat.hpp \
- /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/local/include/opencv4/opencv2/core/persistence.hpp \
- /usr/local/include/opencv4/opencv2/core/operations.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/include/opencv4/opencv2/core/mat.hpp \
+ /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/include/opencv4/opencv2/core/operations.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
  /usr/include/c++/12/complex /usr/include/c++/12/sstream \
  /usr/include/c++/12/istream /usr/include/c++/12/ios \
  /usr/include/c++/12/bits/ios_base.h \
@@ -248,7 +238,7 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/c++/12/bits/ostream.tcc \
  /usr/include/c++/12/bits/istream.tcc \
  /usr/include/c++/12/bits/sstream.tcc \
- /usr/local/include/opencv4/opencv2/core/utility.hpp \
+ /usr/include/opencv4/opencv2/core/utility.hpp \
  /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
  /usr/include/c++/12/unordered_map /usr/include/c++/12/bits/hashtable.h \
  /usr/include/c++/12/bits/hashtable_policy.h \
@@ -260,21 +250,22 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/c++/12/ctime /usr/include/c++/12/bits/parse_numbers.h \
  /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h \
- /usr/local/include/opencv4/opencv2/core/optim.hpp \
- /usr/local/include/opencv4/opencv2/core/ovx.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
- /usr/local/include/opencv4/opencv2/videoio.hpp \
- /usr/local/include/opencv4/opencv2/imgproc.hpp \
- /usr/local/include/opencv4/opencv2/calib3d/calib3d.hpp \
- /usr/local/include/opencv4/opencv2/calib3d.hpp \
- /usr/local/include/opencv4/opencv2/features2d.hpp \
- /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
- /usr/local/include/opencv4/opencv2/flann/defines.h \
- /usr/local/include/opencv4/opencv2/flann/config.h \
- /usr/local/include/opencv4/opencv2/core/affine.hpp \
- /usr/local/include/opencv4/opencv2/calib3d/calib3d_c.h \
- /usr/local/include/opencv4/opencv2/core/types_c.h \
+ /usr/include/opencv4/opencv2/core/optim.hpp \
+ /usr/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/include/opencv4/opencv2/videoio.hpp \
+ /usr/include/opencv4/opencv2/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
+ /usr/include/opencv4/opencv2/calib3d/calib3d.hpp \
+ /usr/include/opencv4/opencv2/calib3d.hpp \
+ /usr/include/opencv4/opencv2/features2d.hpp \
+ /usr/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/include/opencv4/opencv2/flann/defines.h \
+ /usr/include/opencv4/opencv2/flann/config.h \
+ /usr/include/opencv4/opencv2/core/affine.hpp \
+ /usr/include/opencv4/opencv2/calib3d/calib3d_c.h \
+ /usr/include/opencv4/opencv2/core/types_c.h \
  /usr/include/metavision/sdk/base/events/event_cd.h \
  /usr/include/metavision/sdk/base/events/event2d.h \
  /usr/include/c++/12/iterator /usr/include/c++/12/bits/stream_iterator.h \
@@ -284,7 +275,7 @@ CMakeFiles/calib_cam.dir/blinking_chessboard_detector.cpp.o: \
  /usr/include/metavision/sdk/base/events/detail/event_traits.h \
  /usr/include/metavision/sdk/calibration/utils/calibration_detection_frame_generator.h \
  /usr/include/metavision/sdk/calibration/utils/points_on_grid.h \
- /home/moa/projects/c++/calib_evcam/include/blinking_chessboard_detector.h \
- /usr/local/include/opencv4/opencv2/core/core.hpp \
+ /home/moa/projects/eventcam/calib_eventcam/include/blinking_chessboard_detector.h \
+ /usr/include/opencv4/opencv2/core/core.hpp \
  /usr/include/metavision/sdk/calibration/algorithms/blinking_frame_generator_algorithm.h \
  /usr/include/metavision/sdk/calibration/configs/blinking_frame_generator_algorithm_config.h

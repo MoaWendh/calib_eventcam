@@ -107,7 +107,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Release"
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -119,7 +119,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/moa/projects/c++/calib_evcam/build"
+			"value" : "/home/moa/projects/eventcam/calib_eventcam/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -578,6 +578,10 @@
 			"properties" : 
 			[
 				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
 				}
@@ -679,7 +683,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/moa/projects/c++/calib_evcam"
+			"value" : "/home/moa/projects/eventcam/calib_eventcam"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1239,7 +1243,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/local][cfound components: core highgui imgproc calib3d ][v4.4.0()]"
+			"value" : "[/usr][cfound components: core highgui imgproc calib3d ][v4.5.4()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -1507,7 +1511,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/usr/local/lib/cmake/opencv4"
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4"
 		},
 		{
 			"name" : "boost_chrono_DIR",
@@ -1599,7 +1603,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/moa/projects/c++/calib_evcam/build"
+			"value" : "/home/moa/projects/eventcam/calib_eventcam/build"
 		},
 		{
 			"name" : "calibratio_IS_TOP_LEVEL",
@@ -1623,7 +1627,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/moa/projects/c++/calib_evcam"
+			"value" : "/home/moa/projects/eventcam/calib_eventcam"
 		},
 		{
 			"name" : "glfw3_DIR",

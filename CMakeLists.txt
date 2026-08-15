@@ -7,8 +7,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(calibratio)
 
-set(CMAKE_C_COMPILER /usr/bin/gcc-12)
-set(CMAKE_CXX_COMPILER /usr/bin/g++-12)
+#set(CMAKE_C_COMPILER /usr/bin/gcc-12)
+#set(CMAKE_CXX_COMPILER /usr/bin/g++-12)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -16,6 +16,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(MetavisionSDK COMPONENTS core driver cv calibration ui REQUIRED)
 find_package(Boost COMPONENTS filesystem program_options REQUIRED)
 find_package(OpenCV COMPONENTS core highgui imgproc calib3d REQUIRED)
+
+#set(OpenCV_DIR "/usr/lib/x86_64-linux-gnu/cmake/opencv4")
+#find_package(OpenCV 4.5.4 EXACT REQUIRED NO_DEFAULT_PATH PATHS ${OpenCV_DIR} COMPONENTS core highgui imgproc calib3d)
 
 set (sample calib_cam)
 
@@ -42,14 +45,5 @@ target_link_libraries(${sample}
     Boost::filesystem
     ${OpenCV_LIBS})
 
-#target_link_libraries(${sample}
-#   MetavisionSDK::core
-#    MetavisionSDK::base    
-#    MetavisionSDK::driver
-#    MetavisionSDK::cv
-#    MetavisionSDK::calibration
-#    MetavisionSDK::ui
-#    Boost::program_options
-#    Boost::filesystem
-#    ${OpenCV_LIBS})
+
 

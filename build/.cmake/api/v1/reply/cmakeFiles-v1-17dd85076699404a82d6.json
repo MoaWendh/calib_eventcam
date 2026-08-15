@@ -235,11 +235,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -253,11 +253,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVModules.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -525,11 +525,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -571,11 +571,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -644,11 +644,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -729,11 +729,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -898,11 +898,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -932,11 +932,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -993,11 +993,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1125,11 +1125,11 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1145,8 +1145,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/moa/projects/c++/calib_evcam/build",
-		"source" : "/home/moa/projects/c++/calib_evcam"
+		"build" : "/home/moa/projects/eventcam/calib_eventcam/build",
+		"source" : "/home/moa/projects/eventcam/calib_eventcam"
 	},
 	"version" : 
 	{

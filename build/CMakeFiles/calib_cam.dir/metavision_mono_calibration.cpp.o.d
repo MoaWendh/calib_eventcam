@@ -1,5 +1,5 @@
 CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
- /home/moa/projects/c++/calib_evcam/metavision_mono_calibration.cpp \
+ /home/moa/projects/eventcam/calib_eventcam/metavision_mono_calibration.cpp \
  /usr/include/stdc-predef.h /usr/include/boost/filesystem.hpp \
  /usr/include/boost/filesystem/config.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
@@ -28,7 +28,6 @@ CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/boost/config/detail/select_platform_config.hpp \
@@ -57,16 +56,13 @@ CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/12/bits/std_abs.h \
  /usr/include/boost/config/detail/posix_features.hpp \
  /usr/include/boost/config/detail/suffix.hpp \
@@ -104,7 +100,6 @@ CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/12/exception /usr/include/c++/12/bits/exception.h \
  /usr/include/c++/12/bits/exception_ptr.h \
  /usr/include/c++/12/bits/exception_defines.h \
@@ -172,10 +167,9 @@ CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/12/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/12/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
@@ -214,8 +208,6 @@ CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
  /usr/include/c++/12/bits/stl_tempbuf.h \
  /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/c++/12/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/boost/cerrno.hpp \
  /usr/include/boost/system/detail/generic_category.hpp \
  /usr/include/boost/system/detail/system_category_posix.hpp \
@@ -881,50 +873,51 @@ CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
  /usr/include/boost/program_options/detail/convert.hpp \
  /usr/include/boost/program_options/variables_map.hpp \
  /usr/include/boost/program_options/version.hpp \
- /usr/local/include/opencv4/opencv2/calib3d/calib3d.hpp \
- /usr/local/include/opencv4/opencv2/calib3d.hpp \
- /usr/local/include/opencv4/opencv2/core.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/local/include/opencv4/opencv2/core/hal/interface.h \
- /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/include/opencv4/opencv2/calib3d/calib3d.hpp \
+ /usr/include/opencv4/opencv2/calib3d.hpp \
+ /usr/include/opencv4/opencv2/core.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/core/version.hpp \
+ /usr/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/mm_malloc.h \
- /usr/local/include/opencv4/opencv2/core/version.hpp \
- /usr/local/include/opencv4/opencv2/core/base.hpp \
- /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
- /usr/local/include/opencv4/opencv2/core/check.hpp \
- /usr/local/include/opencv4/opencv2/core/traits.hpp \
- /usr/local/include/opencv4/opencv2/core/matx.hpp \
- /usr/local/include/opencv4/opencv2/core/saturate.hpp \
- /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/local/include/opencv4/opencv2/core/types.hpp \
- /usr/local/include/opencv4/opencv2/core/mat.hpp \
- /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/local/include/opencv4/opencv2/core/persistence.hpp \
- /usr/local/include/opencv4/opencv2/core/operations.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
- /usr/local/include/opencv4/opencv2/core/utility.hpp \
- /usr/local/include/opencv4/opencv2/core/optim.hpp \
- /usr/local/include/opencv4/opencv2/core/ovx.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/local/include/opencv4/opencv2/features2d.hpp \
- /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
- /usr/local/include/opencv4/opencv2/flann/defines.h \
- /usr/local/include/opencv4/opencv2/flann/config.h \
- /usr/local/include/opencv4/opencv2/core/affine.hpp \
- /usr/local/include/opencv4/opencv2/calib3d/calib3d_c.h \
- /usr/local/include/opencv4/opencv2/core/types_c.h \
- /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
- /usr/local/include/opencv4/opencv2/highgui.hpp \
- /usr/local/include/opencv4/opencv2/videoio.hpp \
- /usr/local/include/opencv4/opencv2/imgproc.hpp \
+ /usr/include/opencv4/opencv2/core/base.hpp \
+ /usr/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/include/opencv4/opencv2/core/check.hpp \
+ /usr/include/opencv4/opencv2/core/traits.hpp \
+ /usr/include/opencv4/opencv2/core/matx.hpp \
+ /usr/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/include/opencv4/opencv2/core/types.hpp \
+ /usr/include/opencv4/opencv2/core/mat.hpp \
+ /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/include/opencv4/opencv2/core/operations.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/include/opencv4/opencv2/core/utility.hpp \
+ /usr/include/opencv4/opencv2/core/optim.hpp \
+ /usr/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/features2d.hpp \
+ /usr/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/include/opencv4/opencv2/flann/defines.h \
+ /usr/include/opencv4/opencv2/flann/config.h \
+ /usr/include/opencv4/opencv2/core/affine.hpp \
+ /usr/include/opencv4/opencv2/calib3d/calib3d_c.h \
+ /usr/include/opencv4/opencv2/core/types_c.h \
+ /usr/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/include/opencv4/opencv2/highgui.hpp \
+ /usr/include/opencv4/opencv2/videoio.hpp \
+ /usr/include/opencv4/opencv2/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
  /usr/include/metavision/sdk/base/utils/log.h \
  /usr/include/c++/12/iostream \
  /usr/include/metavision/sdk/base/utils/detail/log_impl.h \
@@ -1120,7 +1113,7 @@ CMakeFiles/calib_cam.dir/metavision_mono_calibration.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
  /usr/include/metavision/sdk/cv/utils/detail/vec_traits.h \
- /usr/local/include/opencv4/opencv2/core/core.hpp \
+ /usr/include/opencv4/opencv2/core/core.hpp \
  /usr/include/metavision/sdk/cv/utils/detail/vec_traits_base.h \
  /usr/include/metavision/sdk/cv/utils/detail/vec_traits_eigen.h \
  /usr/include/eigen3/Eigen/Core \

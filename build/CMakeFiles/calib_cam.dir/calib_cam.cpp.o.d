@@ -1,5 +1,5 @@
 CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
- /home/moa/projects/c++/calib_evcam/calib_cam.cpp \
+ /home/moa/projects/eventcam/calib_eventcam/calib_cam.cpp \
  /usr/include/stdc-predef.h /usr/include/metavision/sdk/base/utils/log.h \
  /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
@@ -30,7 +30,6 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/12/exception /usr/include/c++/12/bits/exception.h \
  /usr/include/c++/12/bits/exception_ptr.h \
  /usr/include/c++/12/bits/exception_defines.h \
@@ -121,20 +120,16 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/12/bits/std_abs.h /usr/include/c++/12/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/12/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/12/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
@@ -186,28 +181,24 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/c++/12/bits/stl_multimap.h \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/include/metavision/sdk/driver/camera.h \
  /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
  /usr/include/c++/12/unordered_map /usr/include/c++/12/bits/hashtable.h \
  /usr/include/c++/12/bits/hashtable_policy.h \
  /usr/include/c++/12/bits/enable_special_members.h \
  /usr/include/c++/12/bits/unordered_map.h /usr/include/c++/12/array \
- /usr/include/c++/12/compare /usr/local/include/opencv4/opencv2/core.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/c++/12/limits \
- /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/include/c++/12/compare /usr/include/opencv4/opencv2/core.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/core/version.hpp /usr/include/c++/12/limits \
+ /usr/include/opencv4/opencv2/core/hal/interface.h \
  /usr/include/c++/12/cstddef \
- /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/mm_malloc.h \
- /usr/include/c++/12/stdlib.h \
- /usr/local/include/opencv4/opencv2/core/version.hpp \
- /usr/local/include/opencv4/opencv2/core/base.hpp \
- /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/include/c++/12/stdlib.h /usr/include/opencv4/opencv2/core/base.hpp \
+ /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/c++/12/climits \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
@@ -217,10 +208,9 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
- /usr/include/c++/12/utility /usr/include/c++/12/bits/stl_relops.h \
- /usr/include/c++/12/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/opencv4/opencv2/core/cvstd.hpp /usr/include/c++/12/utility \
+ /usr/include/c++/12/bits/stl_relops.h /usr/include/c++/12/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -241,33 +231,32 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/c++/12/tr1/poly_hermite.tcc \
  /usr/include/c++/12/tr1/poly_laguerre.tcc \
  /usr/include/c++/12/tr1/riemann_zeta.tcc \
- /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
- /usr/include/assert.h /usr/local/include/opencv4/opencv2/core/check.hpp \
- /usr/local/include/opencv4/opencv2/core/traits.hpp \
- /usr/local/include/opencv4/opencv2/core/matx.hpp \
- /usr/local/include/opencv4/opencv2/core/saturate.hpp \
- /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/local/include/opencv4/opencv2/core/types.hpp \
- /usr/include/c++/12/cfloat \
+ /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/include/opencv4/opencv2/core/vsx_utils.hpp /usr/include/assert.h \
+ /usr/include/opencv4/opencv2/core/check.hpp \
+ /usr/include/opencv4/opencv2/core/traits.hpp \
+ /usr/include/opencv4/opencv2/core/matx.hpp \
+ /usr/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/include/opencv4/opencv2/core/types.hpp /usr/include/c++/12/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/12/include/float.h \
- /usr/local/include/opencv4/opencv2/core/mat.hpp \
- /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/local/include/opencv4/opencv2/core/persistence.hpp \
- /usr/local/include/opencv4/opencv2/core/operations.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/include/opencv4/opencv2/core/mat.hpp \
+ /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/include/opencv4/opencv2/core/operations.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
  /usr/include/c++/12/complex /usr/include/c++/12/sstream \
  /usr/include/c++/12/bits/sstream.tcc \
- /usr/local/include/opencv4/opencv2/core/utility.hpp \
- /usr/include/c++/12/mutex /usr/include/c++/12/bits/chrono.h \
- /usr/include/c++/12/ratio /usr/include/c++/12/bits/parse_numbers.h \
+ /usr/include/opencv4/opencv2/core/utility.hpp /usr/include/c++/12/mutex \
+ /usr/include/c++/12/bits/chrono.h /usr/include/c++/12/ratio \
+ /usr/include/c++/12/bits/parse_numbers.h \
  /usr/include/c++/12/bits/std_mutex.h \
  /usr/include/c++/12/bits/unique_lock.h \
- /usr/local/include/opencv4/opencv2/core/optim.hpp \
- /usr/local/include/opencv4/opencv2/core/ovx.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/core/optim.hpp \
+ /usr/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
  /usr/include/metavision/hal/device/device.h \
  /usr/include/metavision/hal/facilities/i_registrable_facility.h \
  /usr/include/metavision/hal/facilities/i_facility.h \
@@ -315,6 +304,10 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
  /usr/include/c++/12/bits/stl_multiset.h \
  /usr/include/metavision/hal/facilities/i_event_trail_filter_module.h \
+ /usr/include/c++/12/fstream /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc \
  /usr/include/boost/property_tree/ptree.hpp \
  /usr/include/boost/property_tree/ptree_fwd.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -328,7 +321,6 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
  /usr/include/boost/config/detail/select_platform_config.hpp \
@@ -544,8 +536,7 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/c++/12/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/12/bits/codecvt.h \
- /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/libintl.h /usr/include/c++/12/bits/locale_facets_nonio.tcc \
  /usr/include/c++/12/bits/locale_conv.h \
  /usr/include/boost/property_tree/stream_translator.hpp \
  /usr/include/boost/optional/optional_io.hpp \
@@ -1016,11 +1007,8 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/boost/property_tree/json_parser/detail/standard_callbacks.hpp \
  /usr/include/boost/property_tree/json_parser/detail/write.hpp \
  /usr/include/c++/12/iomanip /usr/include/c++/12/bits/quoted_string.h \
- /usr/include/c++/12/fstream \
- /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc /usr/include/nlohmann/json.hpp \
- /usr/include/c++/12/numeric /usr/include/c++/12/bits/stl_numeric.h \
+ /usr/include/nlohmann/json.hpp /usr/include/c++/12/numeric \
+ /usr/include/c++/12/bits/stl_numeric.h \
  /usr/include/c++/12/pstl/glue_numeric_defs.h \
  /usr/include/nlohmann/adl_serializer.hpp \
  /usr/include/nlohmann/detail/conversions/from_json.hpp \
@@ -1076,6 +1064,7 @@ CMakeFiles/calib_cam.dir/calib_cam.cpp.o: \
  /usr/include/nlohmann/ordered_map.hpp \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/moa/projects/c++/calib_evcam/include/blinking_pattern_focus.h \
- /home/moa/projects/c++/calib_evcam/include/calibration_recording.h \
- /home/moa/projects/c++/calib_evcam/include/matavision_mono_calibration.h
+ /home/moa/projects/eventcam/calib_eventcam/include/blinking_pattern_focus.h \
+ /home/moa/projects/eventcam/calib_eventcam/include/calibration_recording.h \
+ /home/moa/projects/eventcam/calib_eventcam/include/parameters.hpp \
+ /home/moa/projects/eventcam/calib_eventcam/include/matavision_mono_calibration.h

@@ -14,7 +14,7 @@
 
 ### CPU: Nvidia Jetson Orin Nano
 
-### Arquitetura: amd x86_64
+### Arquitetura: amd x86_64 (Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz)
 
 ---
 
