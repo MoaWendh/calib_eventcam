@@ -192,21 +192,23 @@ void geraParametrosIntrinsecos(ParamsGlobais &params_globais, FilesNames &files_
 
 // Cria menu IHM para seleçao do usuário:
 void show_menu(){
+    std::cout<< "\n\n";
+    std::cout<< "\033[32m"; // A partir daqui exibe na cor verde.
+    std::cout<< "************** Menu de Calibração ***************\n";
+    std::cout<< "\033[0m"; // Retorna a cor original.     
     std::cout<< "\n";
-    std::cout<< "\n";
-    std::cout<< "********** Menu de Calibração **********\n";
-    std::cout<< "\n";
-    std::cout<< "  1-> Testar conexão com a SilkyEvCam\n";
-    std::cout<< "  2-> Ajustar foco da lente \n";
-    std::cout<< "  3-> Calibração - Aquisição de frames \n";
-    std::cout<< "  4-> Calibração - Gerar parâmetros intrinsecos \n";
-    std::cout<< "  5-> Ler biases do .json \n";
-    std::cout<< "  6-> Ler parametros do .json \n" ;
-    std::cout<< "\n";
-    std::cout<< "  Q-> Sair"; 
-    std::cout<< "\n";
-    std::cout<< "****************************************\n";
-    std::cout<< "  Digite a opção:\n";
+    std::cout<< "   1-> Testar conexão com a SilkyEvCam\n\n";
+    std::cout<< "   2-> Ajustar foco da lente \n\n";
+    std::cout<< "   3-> Calibração - Aquisição de frames \n\n";
+    std::cout<< "   4-> Calibração - Gerar parâmetros intrinsecos \n\n";
+    std::cout<< "   5-> Ler biases do .json \n\n";
+    std::cout<< "   6-> Ler parametros do .json \n\n" ;
+    std::cout<< "\033[32m"; // A partir daqui exibe na cor verde.
+    std::cout<< "   Q-> Sair"; 
+    std::cout<< "\n\n";
+    std::cout<< "*************************************************\n";
+    std::cout<< "   Digite a opção: ";
+    std::cout<< "\033[0m"; // Retorna a cor original.   
 }
 
 
