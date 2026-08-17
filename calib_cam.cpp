@@ -221,7 +221,7 @@ bool loadBiasFromJson(Bias &val, const std::string filename){
     }    
 
     nlohmann::json data_json;
-    // Parse completo para a varivael data_json
+    // Parse completo para a varivael data_json:
     file >> data_json;    
 
     if (!data_json.contains("ll_biases_state") || !data_json["ll_biases_state"].contains("bias")){
@@ -263,7 +263,7 @@ bool loadParamsFromJson(ParamsGlobais &params, FilesNames f_names, const std::st
     }
     
     nlohmann::json data_json;
-    // Parse completo ára varivael data_json
+    // Parse completo para variavel data_json:
     file >> data_json;
 
     // Parsing linha a linha do arquivo .json:
@@ -294,7 +294,7 @@ bool loadParamsFromJson(ParamsGlobais &params, FilesNames f_names, const std::st
 
 
 
-// O loop principal cham o menu IHM de usuario e em função da escolha cham a função a ser executada:
+// O loop principal chama o menu IHM de usuario. Ele exibe as opções de escolha da função a ser executada:
 void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames &files_names){
     char my_choice;
 
@@ -305,7 +305,7 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
         // Chama função que exibe IHM com as opcoes de usuario: 
         show_menu();
         
-        //Aguurada escolha do usuarao:
+        //Agurada escolha do usuario:
         std::cin>> my_choice;
         
         // ignora, descartar, os caracteres que ficaram na memória de entrada:
@@ -422,12 +422,12 @@ int main(){
     // Limpa terminal:
     limpaTela();
 
-    // Carrega os param,etros gerais usados no procedimentos de calibraçao definidos em "params.json":    
+    // Carrega os parametros gerais usados no procedimentos de calibraçao definidos em "params.json":    
     if (!loadParamsFromJson(params_globais, files_names, files_names.params_json)){
         std::cout << " [Error] Nao foi possivel carregar o arquivo: " << files_names.params_json << "\n";
     }
 
-    // Carrega os paramentros usados para configurar os "biases" da camera, definidos em "settings.json":
+    // Carrega os parametros usados para configurar os "biases" da camera, definidos em "settings.json":
     if (!loadBiasFromJson(params_bias, files_names.bias_json)){
         std::cout << " [Error] Nao foi possivel carregar o arquivo: " << files_names.bias_json << "\n";
     }
