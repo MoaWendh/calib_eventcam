@@ -12,16 +12,14 @@
 
 - __SO__: Ubuntu 22.04
 
-- __CPU__: Nvidia Jetson Orin Nano
-
-- __Arquitetura__: amd x86_64 (Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz)
+- __Arquitetura__: amd x86_64
 
 ---
 
 ### Este pipeline inclui:
 
-- __1.__ Ajuste de foco com projeção do padrão de estrela "piscante";
+- __1.__ Ajuste de foco com projeção do padrão de __estrela "piscante"__;
 
-- __2.__ Extração dos frames de eventos para calibração, com projeção e padrão chessboard "piscante"
+- __2.__ Captura dos frames de eventos com projeção de padrão __chessboard "piscante__"
 
-- __3.__ Extração dos parâmetros de calibração
+- __3.__ Cálculo dos parâmetros intrínsecos da câmera
