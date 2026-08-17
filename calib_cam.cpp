@@ -207,8 +207,9 @@ void show_menu(){
     std::cout<< "   Q-> Sair"; 
     std::cout<< "\n\n";
     std::cout<< "*************************************************\n";
-    std::cout<< "   Digite a opção: ";
-    std::cout<< "\033[0m"; // Retorna a cor original.   
+    std::cout<< " \033[1m  Digite a opção: "; // Texto em negrito
+    std::cout<< "\033[0m"; // Retorna ao original.
+
 }
 
 
