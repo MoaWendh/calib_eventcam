@@ -39,20 +39,22 @@ void limpaTela(){
 
 
 
-// This function calls the Metavision SDK adjust focus routine:
+// Esta função chama a rotina do Metavisison SDK para efetuar o ajuste de foco da camera:
 void ajustaFoco(){
-    // It defines the path file name (.jpg) that defines the star pattern.
+    // Define o nome do arquivo que contpem a figura do padrão estrela:
     const std::string full_path_pattern_figure = "../blink-pattern.jpg";
     
-    // Definition of the arguments:
-    char arg0[] = "blik-pattern"; // Program name.
-    char arg1[] = "--pattern-image-path";  // Metavision SDK parameter.
+    // Define outros aargumentos a serem passados para a rotina do SDK:
+    // Nome do programa:
+    char arg0[] = "blik-pattern";
+
+    // Parametro que indica que será passado um arquivo: 
+    char arg1[] = "--pattern-image-path";  
     int len= full_path_pattern_figure.length();
     char arg2[len+1];
     std:strcpy(arg2, full_path_pattern_figure.c_str());
 
-    // Crie o array de argumentos para passar à rotina que ira piscar o padrão de estrela
-    // para ajuste do foco:
+    // Cria um array de argumentos para passar à rotina que ira piscar o padrão de estrela para ajuste do foco:
     char* argumentos[] = {
         arg0,
         arg1,
@@ -64,9 +66,8 @@ void ajustaFoco(){
     int argc_aux = std::size(argumentos);
     
     // Chama a função que executa a rotian de ajuste de foco como o padrão piscante
-    // Esta rotina é do SDK Metavision. Ela recebe 2 parâmetros.
+    // Esta rotina é do Metavision SDK. Ela recebe 2 parâmetros.
    int var_teste= blinking_pattern_focus(argc_aux, &argumentos[0]);
-
 }
 
 
@@ -82,7 +83,7 @@ bool testaConexaoEvcam(){
     Metavision::Camera camera;
 
     try {
-        camera = Metavision::Camera::from_first_available();
+        camera= Metavision::Camera::from_first_available();
     } catch (const Metavision::CameraException &e) {
         MV_LOG_ERROR() << e.what();
         return false;
@@ -318,14 +319,12 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 limpaTela();
                 // :
                 if (!testaConexaoEvcam()){
-                        std::cout<< "Camera não conectada!!! "<< std::endl;
-                        std::cout<< "Digite qualquer tecla para retornar ao menu:" << std::endl;
+                        std::cout<< "Camera não conectada!!! \n";                     
                 }
+
                 std::cout << "\n";
-                std::cin.get();
-                std::cout << "Digite qualquer tecla \"Enter\" para retonar ao menu:\n";
-                // Limpa buffer de teclado:
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Digite \"Enter\" para retonar ao menu:\n"; 
+                std::cin.get();   
                 break;                               
             }
 
@@ -333,16 +332,13 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
             case 178:{
                 limpaTela();
                 
-                std::cout<< " Chamando função para ajustar o foco..." << std::endl;
-                std::cout<< " Digite \"ESC\" para fechar o padrão piscante" << std::endl;
-                // Chama a função que ajusta o foco:
+                std::cout<< " Chamando função para ajustar o foco..." << std::endl;                
+                // Chama a função que define os parâmetros e chama rotina de ajuste de foco do Metavision SDK::
                 ajustaFoco();
 
                 std::cout << "\n";
+                std::cout << "Digite \"Enter\" para retonar ao menu:\n"; 
                 std::cin.get();   
-                std::cout << "Digite qualquer tecla \"Enter\" para retonar ao menu:\n";                   
-                // Limpa buffer de teclado:
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;                               
             }
             
@@ -355,10 +351,8 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 capturaFramesDeCalibracao(params_bias, params_globais, files_names);
 
                 std::cout << "\n";
+                std::cout << "Digite \"Enter\" para retonar ao menu:\n"; 
                 std::cin.get();   
-                std::cout << "Digite qualquer tecla \"Enter\" para retonar ao menu:\n";  ;      
-                // Limpa buffer de teclado:
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;                               
             }
             
@@ -370,10 +364,8 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 geraParametrosIntrinsecos(params_globais, files_names);  
 
                 std::cout << "\n";
+                std::cout << "Digite \"Enter\" para retonar ao menu:\n"; 
                 std::cin.get();   
-                std::cout << "Digite qualquer tecla \"Enter\" para retonar ao menu:\n";       
-                // Limpa buffer de teclado:
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;                               
             } 
             
@@ -387,10 +379,8 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 }                
 
                 std::cout << "\n";
+                std::cout << "Digite \"Enter\" para retonar ao menu:\n"; 
                 std::cin.get();   
-                std::cout << "Digite qualquer tecla \"Enter\" para retonar ao menu:\n";               
-                // Limpa buffer de teclado:
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;
             }
 
@@ -404,10 +394,8 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 }
 
                 std::cout << "\n";
+                std::cout << "Digite \"Enter\" para retonar ao menu:\n"; 
                 std::cin.get();   
-                std::cout << "Digite qualquer tecla \"Enter\" para retonar ao menu:\n";      
-                // Limpa buffer de teclado:
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 break;                               
             }                
 

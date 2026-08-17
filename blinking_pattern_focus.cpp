@@ -171,6 +171,8 @@ int blinking_pattern_focus(int argc, char *argv[]) {
                                                Metavision::FileConfigHints().real_time_playback(false));
     }
 
+    std::cout<< " Digite \"ESC\" para fechar o padrão piscant0\ne" ;
+
     const unsigned short width  = camera.geometry().width();
     const unsigned short height = camera.geometry().height();
 
