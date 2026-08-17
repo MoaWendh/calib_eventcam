@@ -104,51 +104,49 @@ bool testaConexaoEvcam(){
 }
 
 
-
+// Função que gera os paramentros e chama a rotina do Metavision SDK para capturar os frames para posterior calibração:
 void capturaFramesDeCalibracao(Bias &params_bias, ParamsGlobais &params_globais, FilesNames &files_names){
     calibration_parameters params;
 
-    // Pattern name:
+    // Define o nome padrão:
     params.args_data.push_back(params_globais.program_name);
     
-    // Pattern Type:
+    // Compo do tipo de padrão usado:
     params.args_data.push_back("--pattern-type");
     
-    //params.args_data.push_back("pattern_type");
+    //Tipo de padrão usado;
     params.args_data.push_back(params_globais.pattern_type); 
 
-    // Width (Number of inner corners of cols):
+    // Captura numero de colunas do padrão:
     params.args_data.push_back("--cols"); // Nome correto do parâmetro do SDK
     params.args_data.push_back(std::to_string(params_globais.cols));
 
-    // Height (Number of the inner corners of rows)
+    // Captura numero de linhas do padrão:
     params.args_data.push_back("--rows"); // Nome correto do parâmetro do SDK
     params.args_data.push_back(std::to_string(params_globais.rows));
 
-    // Name of raw data output file (raw data = images).
-    // OUtput file name:
+    // NOme do arquivo de saida:
     params.args_data.push_back("-o"); // Nome correto do parâmetro do SDK
     params.args_data.push_back(files_names.output_file);
      
-    // Creating pointer argv:
     params.args_ptrs.reserve(params.args_data.size());
 
     for (auto &str : params.args_data) {
-        // const_cast remove o 'const' do c_str(), pois argv é char**
+        // Remove  o 'const' do c_str(), pois argv é char**
         params.args_ptrs.push_back(const_cast<char*>(str.c_str()));
     }
     params.args_ptrs.push_back(nullptr); // Padrão C/C++: argv deve terminar com NULL
 
-    // Setting arc and argv variables:
+    // Gerando os paramentros arc and argv variables:
     params.argc = params.args_ptrs.size() - 1; // Desconta o nullptr
     params.argv = params.args_ptrs.data();
  
-    // Calling SDK Metavision calibration recording imagens function: 
+    // Chama a rotina do Metavision SDK reponsável pel acaptura dos frames de eventos: 
     int var_teste= calibration_recording(params.argc, params.argv, params_bias);
 }
 
 
-
+// Função que chama a rotina de calibração do Metvisiona SDK, ela gera os paramentros de calibração a partir do frames de eventos anteriormente gerados:
 void geraParametrosIntrinsecos(ParamsGlobais &params_globais, FilesNames &files_names){
     calibration_parameters params;
 
@@ -156,35 +154,36 @@ void geraParametrosIntrinsecos(ParamsGlobais &params_globais, FilesNames &files_
     std::string output_file= files_names.output_file; 
     bool refine_calib= params_globais.refine_calibration;
     
-    // Creating data vectors (Strings).
+    // Define o nome padrão:
     params.args_data.push_back(program_name);  
 
-    // Pattern Type:
+    // Compo do tipo de padrão usado:
     params.args_data.push_back("-i");
 
-    //params.args_data.push_back("pattern_type");
+    //Arquivo de saída de dados;
     params.args_data.push_back(output_file);
 
+    // Se estiver habilitado define o refinamenteo de calibração:
     if (refine_calib) {
-        // Width (Number of inner corners of cols):
         params.args_data.push_back("-r"); // Nome correto do parâmetro do SDK
         params.args_data.push_back("REFINE_AND_SHOW_IMAGES");
     }
 
-    // Creating pointer argv:
+    // Cria ponteiro argv:
     params.args_ptrs.reserve(params.args_data.size());
 
     for (auto &str : params.args_data) {
         // const_cast remove o 'const' do c_str(), pois argv é char**
         params.args_ptrs.push_back(const_cast<char*>(str.c_str()));
     }
-    params.args_ptrs.push_back(nullptr); // Padrão C/C++: argv deve terminar com NULL
+    // Padrão C/C++: argv deve terminar com NULL
+    params.args_ptrs.push_back(nullptr); 
 
-    // Setting arc and argv variables:
+    // Gera os paramentros argc e argv:
     params.argc = params.args_ptrs.size() - 1; // Desconta o nullptr
     params.argv = params.args_ptrs.data();    
 
-    // Calling SDK Metavision calibration to generate intrinsics parameters: 
+    // Chama a rotina do Metavision SDK que calcula oas parametros intrinsecos a partir dos frames previamente gerados: 
     extract_intrinsics_parameters(params.argc, params.argv); 
 }
 
@@ -222,7 +221,7 @@ bool loadBiasFromJson(Bias &val, const std::string filename){
     }    
 
     nlohmann::json data_json;
-    // Parse completo ára varivael data_jason
+    // Parse completo para a varivael data_json
     file >> data_json;    
 
     if (!data_json.contains("ll_biases_state") || !data_json["ll_biases_state"].contains("bias")){
@@ -264,7 +263,7 @@ bool loadParamsFromJson(ParamsGlobais &params, FilesNames f_names, const std::st
     }
     
     nlohmann::json data_json;
-    // Parse completo ára varivael data_jason
+    // Parse completo ára varivael data_json
     file >> data_json;
 
     // Parsing linha a linha do arquivo .json:
