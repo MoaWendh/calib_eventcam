@@ -31,6 +31,7 @@
 
 
 
+
 // Limpa terminal:
 void limpaTela(){
     std::cout << "\033[2J\033[1;1H" << std::flush;
@@ -189,7 +190,8 @@ void geraParametrosIntrinsecos(ParamsGlobais &params_globais, FilesNames &files_
 
 
 
-// Show menu function:
+
+// Cria menu IHM para seleçao do usuário:
 void show_menu(){
     std::cout<< "\n";
     std::cout<< "\n";
@@ -253,8 +255,7 @@ bool loadBiasFromJson(Bias &val, const std::string filename){
 
 
 // Efetua o parssing do arquivo que contem os paramentors gerais e carrega na variavel struct parmas, definida em "parametros.hpp":
-bool loadParamsFromJson(ParamsGlobais &params, FilesNames f_names, const std::string &filename) {
-    
+bool loadParamsFromJson(ParamsGlobais &params, FilesNames f_names, const std::string &filename) {   
     std::cout << "Lendo arquivo: " << filename << " ..." << std::endl;
     std::ifstream file(filename);
     
