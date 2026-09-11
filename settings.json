@@ -16,11 +16,11 @@
         },
         {
             "name": "bias_diff_off",
-            "value": 200
+            "value": 150
         },
         {
             "name": "bias_diff_on",
-            "value": 400
+            "value": 480
         },
         {
             "name": "bias_fo",

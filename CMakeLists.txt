@@ -10,6 +10,13 @@ project(calibratio)
 #set(CMAKE_C_COMPILER /usr/bin/gcc-12)
 #set(CMAKE_CXX_COMPILER /usr/bin/g++-12)
 
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+    message(STATUS " ** MODO BUILD: Release!!!!")
+else()
+    message(STATUS " ** MODO BUILD: Debug!!!!")
+endif()
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -28,7 +35,8 @@ add_executable(${sample}
                calibration_recording.cpp
                blinking_chessboard_detector.cpp 
                blinking_dots_grid_detector.cpp
-               metavision_mono_calibration.cpp)
+               metavision_mono_calibration.cpp
+               myfucntions.cpp)
 
 target_include_directories(${sample} PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}

@@ -41,7 +41,7 @@ void limpaTela(){
 
 
 // Esta função chama a rotina do Metavisison SDK para efetuar o ajuste de foco da camera:
-void ajustaFoco(){
+void ajustaFoco(Bias &params){
     // Define o nome do arquivo que contpem a figura do padrão estrela:
     const std::string full_path_pattern_figure = "../blink-pattern.jpg";
     
@@ -68,7 +68,7 @@ void ajustaFoco(){
     
     // Chama a função que executa a rotian de ajuste de foco como o padrão piscante
     // Esta rotina é do Metavision SDK. Ela recebe 2 parâmetros.
-   int var_teste= blinking_pattern_focus(argc_aux, &argumentos[0]);
+   int var_teste= blinking_pattern_focus(argc_aux, &argumentos[0], params);
 }
 
 
@@ -201,7 +201,7 @@ void show_menu(){
     std::cout<< "   2-> Ajustar foco da lente \n\n";
     std::cout<< "   3-> Calibração - Aquisição de frames \n\n";
     std::cout<< "   4-> Calibração - Gerar parâmetros intrinsecos \n\n";
-    std::cout<< "   5-> Ler biases do .json \n\n";
+    std::cout<< "   5-> Exibe os valore dos biases do .json \n\n";
     std::cout<< "   6-> Ler parametros do .json \n\n" ;
     std::cout<< "\033[32m"; // A partir daqui exibe na cor verde.
     std::cout<< "   Q-> Sair"; 
@@ -331,24 +331,36 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 break;                               
             }
 
+
             case '2':
             case 178:{
                 limpaTela();
                 
+                // Chama função que carrega os os biases de arquivo json:
+                if (!loadBiasFromJson(params_bias, files_names.bias_json)){
+                    std::cout << " [Error] Nao foi possivel carregar o arquivo: " << files_names.bias_json << "\n";
+                }                    
+                
                 std::cout<< " Chamando função para ajustar o foco..." << std::endl;                
                 // Chama a função que define os parâmetros e chama rotina de ajuste de foco do Metavision SDK::
-                ajustaFoco();
+                ajustaFoco(params_bias);
 
                 std::cout << "\n";
                 std::cout << "Digite \"Enter\" para retonar ao menu:\n"; 
                 std::cin.get();   
                 break;                               
             }
+
             
             case '3':
             case 179:{
                 limpaTela();    
                 
+                // Chama função que carrega os os biases de arquivo json:
+                if (!loadBiasFromJson(params_bias, files_names.bias_json)){
+                    std::cout << " [Error] Nao foi possivel carregar o arquivo: " << files_names.bias_json << "\n";
+                }                    
+                                
                 // Chama função para efetuar a aquisição dos frames de eventos pára calibração:
                 std::cout<< "Chamando função para captura de frame...." << std::endl;
                 capturaFramesDeCalibracao(params_bias, params_globais, files_names);
@@ -358,6 +370,7 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 std::cin.get();   
                 break;                               
             }
+
             
             case '4':
             case 180: {
@@ -371,6 +384,7 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 std::cin.get();   
                 break;                               
             } 
+
             
             case '5':
             case 181:{
@@ -386,6 +400,7 @@ void loopPrincipal(Bias &params_bias, ParamsGlobais &params_globais, FilesNames 
                 std::cin.get();   
                 break;
             }
+
 
             case '6':
             case 182:{

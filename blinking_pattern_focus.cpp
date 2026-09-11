@@ -13,6 +13,7 @@
 #include <chrono>
 #include <boost/program_options.hpp>
 #include <boost/filesystem.hpp>
+
 #include <metavision/sdk/base/utils/log.h>
 #include <metavision/sdk/core/utils/frame_composer.h>
 #include <metavision/sdk/core/algorithms/periodic_frame_generation_algorithm.h>
@@ -27,6 +28,9 @@
 #include <metavision/sdk/ui/utils/window.h>
 
 #include "blinking_pattern_generator.h"
+
+#include "parameters.hpp"
+#include "myfucntions.hpp"
 
 namespace po = boost::program_options;
 namespace fs = boost::filesystem;
@@ -148,9 +152,13 @@ bool get_configuration(int argc, char *argv[], Config &config) {
 
 
 
+
+
+
+
 // Esta função simplismente exibe o padrão de estrla piscando na tela com frequencia definida.
 // O nome a imagem é path que contém o padrão é passao pelo *argv[].
-int blinking_pattern_focus(int argc, char *argv[]) {
+int blinking_pattern_focus(int argc, char *argv[], Bias &params) {
     Config conf_;
 
     if (!get_configuration(argc, argv, conf_))
@@ -171,7 +179,21 @@ int blinking_pattern_focus(int argc, char *argv[]) {
                                                Metavision::FileConfigHints().real_time_playback(false));
     }
 
-    std::cout<< " Digite \"ESC\" para fechar o padrão piscant0\ne" ;
+    // Efetua alçeitura dos biases antes dos valroes atuais serem gravados e exibe na tela os valores atuais:
+    readBiasesCam(camera);
+
+    // Grava os valores de biases, definido pelo usuario no arquivo .json, na camera de eventos:
+    if (!writeBiasesCam(camera, params)){
+        std::cout << "[Erro] Não foi possivel gravar os biases na camera.\n";
+        return 1; 
+    }
+    else{
+        // apenas efetua a leitura dos biases após a gravação, exibindo na tela os valores:
+        readBiasesCam(camera);
+    }
+
+
+    std::cout<< " Digite \"ESC\" para fechar o padrão piscante\n" ;
 
     const unsigned short width  = camera.geometry().width();
     const unsigned short height = camera.geometry().height();

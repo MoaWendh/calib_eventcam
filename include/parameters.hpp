@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-
+#include <vector>
 
 // Struct que guarda os nomes dos arquivos usado no programa:
 struct FilesNames{
